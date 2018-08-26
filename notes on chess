@@ -1,0 +1,39 @@
+push bach to repo
+
+write graphics 
+
+ /*
+     *
+     *
+     * TODO: Chess things:
+     * double bishop bonus, pk4 recommendation
+     * get better position scores
+     * alpha beta
+     * repetition table
+     * move ordering
+     * quiescent search
+     * pruning
+     * end game boards
+     * start game boards
+     * save the boards that got made ?
+     *
+     *
+     * TODO: Programming things:
+     *
+     * remove dependency on hard coding depth for purposes of min and max
+     * remove everything static. May help when I simulate games between engines.
+     * do not wait for all board to have been generated,
+     * 			once desired depth (?) reached for a move, send it to eval
+     * MultiThread, both in general, one thread for each list generated from possible moves
+     * create this into an application, that is "double clicked" from desktop
+     * GUI, if possible hack this into already existing.
+     * use SOLID or similar principles to clean up
+     * remove obsolete classes.
+     * Optimise for speed (arrays vs lists)
+     * memory control within application
+     * possibly write to file
+     * memory controls / tricks
+     *
+     *
+     */
+
