@@ -6,7 +6,8 @@ write graphics
      *
      *
      * TODO: Chess things:
-     * double bishop bonus, pk4 recommendation
+     * double bishop bonus, 
+add clock
      * get better position scores
      * alpha beta
      * repetition table

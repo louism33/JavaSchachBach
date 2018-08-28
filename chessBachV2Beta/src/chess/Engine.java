@@ -12,7 +12,7 @@ public class Engine {
     private int increment;
     private boolean startingBoard;
 
-    private static final String programName = "Bach Version One";
+    private static final String programName = "Bach Version Two";
 
     public String getName() {
         return programName;

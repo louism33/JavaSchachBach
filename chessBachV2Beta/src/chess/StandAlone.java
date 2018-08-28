@@ -52,13 +52,21 @@ public class StandAlone {
         Move m;
 
         Engine player = new Engine();
+
+        Graphics graphics = new Graphics();
+
         System.out.println("Computer player: "+player.getName());
 
         while(true) {
             player.newGame(5*60*1000, 0);  // time control of 5 0, not that it
             // matters much
+
+
             while (true) {
                 b = player.getBoard();
+                graphics.setBoard(b);
+
+
                 if (b.getTurn() == ChessBoard.WHITE) prompt = "White"; else prompt = "Black";
                 System.out.println("\n\nPosition ("+prompt+" to move):\n"+b);
                 moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
@@ -108,6 +116,8 @@ public class StandAlone {
                 player.applyMove(m);
                 System.out.println(prompt + " made move "+m);
             }
+
+
 
             while(true) {
                 System.out.print("Play again? (y/n):");
