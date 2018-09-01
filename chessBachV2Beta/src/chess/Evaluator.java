@@ -16,9 +16,6 @@ public class Evaluator {
 
     private static final int MATE = -1000000;
 
-    public Evaluator() {
-    }
-
     public int eval(ChessBoard board) {
         if (isInMate(board)) {
             return MATE;
@@ -38,7 +35,7 @@ public class Evaluator {
         int boardScore;
 
         //very basic test to work out if end game position scores should be used
-        boolean endGame = maxMyPieces < 8;
+        boolean endGame = maxMyPieces < 4;
 
         for (int p = 0; p < maxMyPieces; p ++) {
             SquareDesc piece = myPieces[p];

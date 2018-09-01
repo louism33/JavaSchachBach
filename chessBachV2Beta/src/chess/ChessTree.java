@@ -1,90 +1,28 @@
 package chess;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ChessTree<T> extends Tree<ChessBoard> {
 
-    private int totalCount, totalLeafCount, depth, score, rippleScore, difficulty;
     private typeOfNode typeOfNode;
+    private int depth, score, rippleScore;
     private Evaluator evaluator;
-    private List<Integer> childrenRippleScores;
+
+
 
     public ChessTree(ChessBoard data) {
         super(data);
         this.evaluator = new Evaluator();
-        this.childrenRippleScores = new ArrayList<>();
+
         this.score = evaluator.eval(this.getData());
         this.depth = 0;
-        this.rippleScore = 0;
+        this.rippleScore = this.score;
         this.typeOfNode = typeOfNode.ROOT;
 
-        // 1, 2 or 3
-        difficulty = 3;
-
-    }
-
-    void findBestMoveInCertainTime (long timeAtStart) {
-        deepChildren();
-        this.extractScores();
-        long t2 = System.currentTimeMillis();
-        long ta = (t2 - timeAtStart)/1000;
-
-        System.out.println("Making the tree and extracting the scores took "+ ta + " seconds.");
-
-        totalCount = totalCount();
-        totalLeafCount = totalLeafCount();
-        System.out.println("This is approximately "+(this.totalCount / ta) + " boards per second.");
-        System.out.println(this);
-
-    }
-
-    private void deepChildren(){
-        this.makeChildren();
-        if (this.depth < difficulty) {
-            for (Tree<ChessBoard> childTree : this.getChildren()) {
-                ((ChessTree<ChessBoard>) childTree).deepChildren();
-            }
-        }
-    }
-
-    Move bestMove(){
-        Move mostDesirableMove;
-        List<Move> moveList = this.getData().generateMoves();
-
-        if (this.childrenRippleScores.size() > 0 ) {
-            int mostDesirableScore;
-            mostDesirableScore = Collections.max(this.childrenRippleScores);
-            int indexOfMostDesirableMove = this.childrenRippleScores.indexOf(mostDesirableScore);
-            mostDesirableMove = moveList.get(indexOfMostDesirableMove);
-
-            return mostDesirableMove;
-        }
-        return moveList.get(0);
     }
 
 
-    void extractScores (){
-        if (this.typeOfNode == typeOfNode.LEAF){
-            if (this.depth % 2 == 0) {
-                this.rippleScore = this.score;
-            }
-            else {
-                this.rippleScore = (-1) * this.score;
-            }
-        }
-        else {
-            for (Tree<ChessBoard> childTree : this.getChildren()) {
-                ((ChessTree<ChessBoard>) childTree).extractScores();
-                this.childrenRippleScores.add(((ChessTree<ChessBoard>) childTree).rippleScore);
-            }
-            this.rippleScore = Collections.max(this.childrenRippleScores);
-        }
-    }
-
-
-    private void makeChildren(){
+    void makeChildren(){
         List<Move> moveList =  this.getData().generateMoves();
         for (Move move : moveList) {
             ChessBoard newBoard = new ChessBoard(this.getData());
@@ -92,6 +30,9 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             ChessTree childTree = new ChessTree(newBoard);
             childTree.setParent(this);
             childTree.setDepth(this.depth+1);
+            if ((this.depth + 1) % 2 == 0){
+                childTree.setRippleScore(childTree.getRippleScore()*(-1));
+            }
             childTree.setTypeOfNode(typeOfNode.LEAF);
             if (this.typeOfNode == typeOfNode.LEAF){
                 this.typeOfNode = typeOfNode.NODE;
@@ -118,6 +59,7 @@ public class ChessTree<T> extends Tree<ChessBoard> {
         int childrenNum = 0;
         for (Tree<ChessBoard> childTree : this.getChildren()) {
             childrenNum += ((ChessTree<ChessBoard>) childTree).totalLeafCount();
+
         }
         return childrenNum;
     }
@@ -126,8 +68,8 @@ public class ChessTree<T> extends Tree<ChessBoard> {
     public String toString() {
         String ans = (""
 //                + "Board:\n" + this.getData()
-                + "\nScore of the current board (the bigger the better):\n" +this.score
-                + "\nRipple score of the current board (the bigger the better):\n" +this.getRippleScore()
+//                + "\nScore of the current board (the bigger the better):\n" +this.getScore()
+//                + "\nRipple score of the current board (the bigger the better):\n" +this.getRippleScore()
                 + "\nNumber Of Children:\n"+this.getChildren().size()
                 + "\nTotal Number of Boards in Tree:\n" + this.totalCount()
                 + "\nOf which leaves:\n" + this.totalLeafCount()
@@ -149,6 +91,10 @@ public class ChessTree<T> extends Tree<ChessBoard> {
         this.depth = depth;
     }
 
+    public int getDepth() {
+        return depth;
+    }
+
     private int getRippleScore() {
         return rippleScore;
     }
@@ -157,7 +103,31 @@ public class ChessTree<T> extends Tree<ChessBoard> {
         this.typeOfNode = typeOfNode;
     }
 
-    private enum typeOfNode {
+    public void setRippleScore(int rippleScore) {
+        this.rippleScore = rippleScore;
+    }
+
+    public ChessTree.typeOfNode getTypeOfNode() {
+        return typeOfNode;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public Evaluator getEvaluator() {
+        return evaluator;
+    }
+
+    public void setEvaluator(Evaluator evaluator) {
+        this.evaluator = evaluator;
+    }
+
+    enum typeOfNode {
         ROOT, NODE, LEAF
     }
 }

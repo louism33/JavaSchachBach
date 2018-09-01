@@ -24,6 +24,7 @@ public class StandAlone {
 
     private static boolean logfile = false; // true if we're using a logfile
 
+    static boolean startingBoard = true;
     private static int totalMoves = 1;
 
     public static void main(String[] args) throws IOException {
@@ -90,7 +91,7 @@ public class StandAlone {
 
                     command = readCommand(stdin);
                     System.out.println("This is move number " + totalMoves+".");
-                    totalMoves++;
+
                     if (command.equals("go")) {
                         m = player.computeMove(1*60*1000, 0);  /*
                          * simulate 1 minute on the
@@ -114,6 +115,8 @@ public class StandAlone {
                     }
                 }
                 player.applyMove(m);
+                totalMoves++;
+                startingBoard = false;
                 System.out.println(prompt + " made move "+m);
             }
 
@@ -123,7 +126,11 @@ public class StandAlone {
                 System.out.print("Play again? (y/n):");
                 command = readCommand(stdin);
                 if (command.equals("n")) System.exit(1);
-                if (command.equals("y")) break;
+                if (command.equals("y")) {
+                    totalMoves = 0;
+                    startingBoard = true;
+                    break;
+                }
             }
         }
     }
