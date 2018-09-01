@@ -34,23 +34,52 @@ public class Evaluator {
         int enemyScore = 0;
         int boardScore;
 
-        //very basic test to work out if end game position scores should be used
-        boolean endGame = maxMyPieces < 4;
-
         for (int p = 0; p < maxMyPieces; p ++) {
             SquareDesc piece = myPieces[p];
             int pieceTempScore = pieceValue[piece.type];
-            int pieceFinalScore = pieceTempScore * locationValue(piece, true, myTurn, endGame);
+            int pieceFinalScore = pieceTempScore * locationValue(piece, true, myTurn);
             friendlyScore += pieceFinalScore;
         }
 
         for (int p = 0; p < maxEnemyPieces; p ++) {
             SquareDesc piece = enemyPieces[p];
             int pieceTempScore = pieceValue[piece.type];
-            int pieceFinalScore = pieceTempScore * locationValue(piece, false, myTurn, endGame);
+            int pieceFinalScore = pieceTempScore * locationValue(piece, false, myTurn);
             enemyScore += pieceFinalScore;
         }
         boardScore = friendlyScore - enemyScore;
+
+        return boardScore;
+    }
+
+    public int deltaEval (ChessBoard child, ChessBoard parent, Move originatorMove, int parentScore) {
+        if (isInMate(child)) {
+            return MATE;
+        }
+        if (isStalemate(child)) {
+            return 0;
+        }
+
+        int myTurn = child.getTurn();
+        int enemyTurn = 1 - myTurn;
+
+        SquareDesc pieceInFirstLocation = parent.getSquare(originatorMove.srcx, originatorMove.srcy);
+        int movedPieceScore = pieceValue[pieceInFirstLocation.type];
+        int preMovePieceValue = movedPieceScore * locationValue(pieceInFirstLocation, true, enemyTurn);
+        SquareDesc pieceInSecondLocation = child.getSquare(originatorMove.destx, originatorMove.desty);
+        int postMovePieceValue = movedPieceScore * locationValue(pieceInSecondLocation, true, enemyTurn);
+
+        int deltaEnemy = 0;
+
+        if (originatorMove.capture){
+            int takenPieceScore = pieceValue[pieceInSecondLocation.type]; // TODO: check this, esp enemyturn
+            int enemyCapturedPieceValue = takenPieceScore * locationValue(pieceInSecondLocation, false, enemyTurn);
+            deltaEnemy -= enemyCapturedPieceValue;
+            System.out.println("This is a capture move! Wow!");
+        }
+
+        int deltaMyPiece = postMovePieceValue - preMovePieceValue;
+        int boardScore = -(parentScore + deltaEnemy + deltaMyPiece);
 
         return boardScore;
     }
@@ -73,7 +102,7 @@ public class Evaluator {
         return false;
     }
 
-    private static int locationValue(SquareDesc piece, boolean friendly, int currentPlayer, boolean endGame) {
+    private static int locationValue(SquareDesc piece, boolean friendly, int currentPlayer) {
         int ycoord;
         if (currentPlayer == WHITE) {
             ycoord = friendly ? piece.y : (7-piece.y);
@@ -102,15 +131,15 @@ public class Evaluator {
             int loc = ycoord + piece.x;
             return queenpos[loc];
         }
-        else if (piece.type == KING && endGame) {
-            int loc = ycoord + piece.x;
-            return kingposend[loc];
-        }
+//        else if (piece.type == KING && endGame) {
+//            int loc = ycoord + piece.x;
+//            return kingposend[loc];
+//        }
         else if (piece.type == KING) {
             int loc = ycoord + piece.x;
             return kingposstart[loc];
         }
-        else return 1;
+        else return 6666666;
     }
 
     private static int[] pieceValue = new int[7];
@@ -123,7 +152,7 @@ public class Evaluator {
         pieceValue[KING]   = 900;
         pieceValue[EMPTY]  = 0;
     }
-
+ // completely remove all negatives, as they make you less interested in taking anything
     private static int bishoppos[] = {
             -20,-10,-10,-10,-10,-10,-10,-20,
             -10,  5,  0,  0,  0,  0,  5,-10,

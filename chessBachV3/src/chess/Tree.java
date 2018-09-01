@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class Tree<T> {
 
-    private T data = null;
+    private T data;
     private List<Tree<T>> children = new ArrayList<>();
     private Tree parent = null;
 

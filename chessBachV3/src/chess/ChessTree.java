@@ -7,20 +7,29 @@ public class ChessTree<T> extends Tree<ChessBoard> {
     private typeOfNode typeOfNode;
     private int depth, score, rippleScore;
     private Evaluator evaluator;
-
+    private Move creatorMove;
 
 
     public ChessTree(ChessBoard data) {
         super(data);
         this.evaluator = new Evaluator();
-
-        this.score = evaluator.eval(this.getData());
         this.depth = 0;
-        this.rippleScore = this.score;
         this.typeOfNode = typeOfNode.ROOT;
-
+        scoreMe();
     }
 
+    void scoreMe(){
+        if (this.typeOfNode == typeOfNode.ROOT) {
+            this.score = evaluator.eval(this.getData());
+        } else {
+            this.score = evaluator.deltaEval(
+                    this.getData(),
+                    ((ChessBoard) this.getParent().getData()),
+                    this.creatorMove,
+                    ((ChessTree<ChessBoard>) this.getParent()).getScore());
+        }
+        this.rippleScore = this.score;
+    }
 
     void makeChildren(){
         List<Move> moveList =  this.getData().generateMoves();
@@ -28,6 +37,7 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             ChessBoard newBoard = new ChessBoard(this.getData());
             newBoard.makeMove(move);
             ChessTree childTree = new ChessTree(newBoard);
+            childTree.setCreatorMove(move);
             childTree.setParent(this);
             childTree.setDepth(this.depth+1);
             if ((this.depth + 1) % 2 == 0){
@@ -125,6 +135,14 @@ public class ChessTree<T> extends Tree<ChessBoard> {
 
     public void setEvaluator(Evaluator evaluator) {
         this.evaluator = evaluator;
+    }
+
+    public Move getCreatorMove() {
+        return creatorMove;
+    }
+
+    public void setCreatorMove(Move creatorMove) {
+        this.creatorMove = creatorMove;
     }
 
     enum typeOfNode {

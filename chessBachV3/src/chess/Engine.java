@@ -1,17 +1,14 @@
 package chess;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Engine {
 
     private ChessBoard board;
-    private Evaluator evaluator;
     private IterativeDeepener iterativeDeepener;
 
     private static long startTime, allocated;
-    private int increment, maxDepthReached;
+    private int increment;
 
     private static final String programName = "Bach Version Three";
 
@@ -56,6 +53,10 @@ public class Engine {
         if (numberOfMoves == 1){
             ((List<ChessBoard>) board.generateMoves()).get(0);
         }
+
+
+
+
 
         return search(startTime, allocated);
     }

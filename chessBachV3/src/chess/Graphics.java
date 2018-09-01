@@ -15,7 +15,7 @@ public class Graphics extends JPanel {
 
     private static int WIDTH = 600, HEIGHT = 600, xoffset, yoffset;
     private ChessBoard board;
-private double scaleFac;
+    private double scaleFac;
     private int xyfactor, size, pieceSize;
 
     BufferedImage whitePawn, whiteKnight, whiteBishop, whiteRook, whiteQueen, whiteKing;
