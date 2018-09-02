@@ -72,7 +72,7 @@ public class Evaluator {
         int deltaEnemy = 0;
 
         if (originatorMove.capture){
-            int takenPieceScore = pieceValue[pieceInSecondLocation.type]; // TODO: check this, esp enemyturn
+            int takenPieceScore = pieceValue[pieceInSecondLocation.type];
             int enemyCapturedPieceValue = takenPieceScore * locationValue(pieceInSecondLocation, false, enemyTurn);
             deltaEnemy -= enemyCapturedPieceValue;
             System.out.println("This is a capture move! Wow!");
