@@ -4,12 +4,6 @@ public class IterativeDeepener {
 
     private int maxDepthReached;
 
-    // should alpha beta go here ?
-
-    // the purpose of alpha beta would be NOT TO PURSUE certain branches
-    // It seems that it works if eval is packaged into tree, as it currently is.
-    // look up alpha beta with infinite trees
-
     void expandTree (ChessTree<ChessBoard> tree, long startTime, long timeLimitMillis){
         iterativeDeepeningSearch (tree,  startTime,  timeLimitMillis);
         }
