@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 1000;
+        t = 100000;
 
         return (int) t;
     }
@@ -43,9 +43,9 @@ public class Engine {
         allocated = allocateTime(timeleft, optime);
 
         if (StandAlone.startingBoard){
-            Move move = (Math.random() < 0.5) ? ((List<Move>) board.generateMoves()).get(8)
-                    : ((List<Move>) board.generateMoves()).get(10);
-            return move;
+//            Move move = (Math.random() < 0.5) ? ((List<Move>) board.generateMoves()).get(8)
+//                    : ((List<Move>) board.generateMoves()).get(10);
+//            return move;
         }
 
         int numberOfMoves = board.generateMoves().size();
@@ -53,11 +53,6 @@ public class Engine {
         if (numberOfMoves == 1){
             ((List<ChessBoard>) board.generateMoves()).get(0);
         }
-
-
-
-
-
         return search(startTime, allocated);
     }
 
@@ -72,26 +67,23 @@ public class Engine {
         iterativeDeepener = new IterativeDeepener();
         NegaMaxer negaMaxer = new NegaMaxer();
 
-        iterativeDeepener.expandTree(tree, startTime, timeLimitMillis);
+
+        Move mostDesirableMove = iterativeDeepener.expandChildren(tree, startTime, timeLimitMillis);
+
 
         long t1 = System.currentTimeMillis();
         if (timeDetails) {
             long z = (t1 - startTime);
-            System.out.println("Deepening the tree took " + z + " milliseconds.");
+            System.out.println("Expanding and searching took " + z + " milliseconds.");
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
-        }
-
-        Move mostDesirableMove = negaMaxer.performNegaMaxMoveSearch(tree);
-
-        if (timeDetails) {
-            long t2 = System.currentTimeMillis();
-            long zz = (t2 - t1);
-            System.out.println("Extracting the scores took " + zz + " milliseconds.");
             timeInfo(tree, startTime);
         }
-        System.out.println(tree);
+
+
         return mostDesirableMove;
     }
+
+
 
 
 
@@ -104,7 +96,7 @@ public class Engine {
         long totalTimeSeconds = (endTime - startTime) / 1000;
         System.out.println("The whole process took " + totalTime + " milliseconds.");
 
-        if (totalTime > 0) {
+        if (totalTime > 0 && totalTimeSeconds > 0) {
             System.out.println("This is approximately " + (tree.totalCount() / totalTimeSeconds) + " boards per second.");
         }
     }

@@ -2,13 +2,15 @@ package chess;
 
 import java.util.List;
 
-public class IterativeDeepener {
+public class IterativeDeepenerTwo {
+
+
 
     private int MATE = Evaluator.MATE;
 
     private int maxDepthReached;
 
-// TODO:
+    // TODO:
     /*
     fix timeUp
     decide if should run alpha beta on original tree, or on its children (current version is latter)
@@ -21,7 +23,7 @@ public class IterativeDeepener {
         IterativeDeepener id = new IterativeDeepener();
     }
 
-    IterativeDeepener(){
+    IterativeDeepenerTwo(){
         ChessBoard c = new ChessBoard();
         List<Move> moves = c.generateMoves();
 //        c.makeMove(moves.get(0));
@@ -30,18 +32,16 @@ public class IterativeDeepener {
         long alloted = 200000;
 
 
-//        Move mmm = expandChildren(tree, st, alloted);
+        Move mmm = expandChildren(tree, st, alloted);
 
 //        ChessBoard zzz = new ChessBoard(c);
 //        zzz.makeMove(mmm);
 
-//        System.out.println(mmm);
+        System.out.println(mmm);
     }
 
 
-
-    public Move expandChildren (ChessTree<ChessBoard> tree, long startTime, long timeLimitMillis){
-        // call this on first tree. It should return best move
+    Move expandChildren (ChessTree<ChessBoard> tree, long startTime, long timeLimitMillis){
 
         // here we can say where to start looking, eg Killer Heuristic
         // eventually multi thread, so that no time div is necessary. Make thread safe
@@ -53,34 +53,14 @@ public class IterativeDeepener {
         int numberOfKids = tree.getChildren().size();
 
 
-
         ChessTree<ChessBoard> winnerKid = null;
         int winnerNum = 0;
 
-        for (Tree<ChessBoard> childTree : tree.getChildren()) {
-
-            long timeLimitForEachMove = timeLimitMillis / numberOfKids;
-
-            int score = iterativeDeepener.iterativeDeepeningSearch(((ChessTree) childTree), tree.getPlayer(), timeLimitForEachMove);
-
-
-            if (score > maxScore){
-                maxScore = score;
-                moveToPlay = ((ChessTree) childTree).getCreatorMove();
-            }
-
-        }
-
-        return moveToPlay;
-    }
-
-
-    Move expandChildren (ChessTree<ChessBoard> tree, long startTime, long timeLimitMillis){
 
         for (Tree<ChessBoard> childTree : tree.getChildren()) {
             Move plop = ((ChessTree) childTree).getCreatorMove();
 
-//            long timeLimitForEachMove = timeLimitMillis / numberOfKids;
+            long timeLimitForEachMove = timeLimitMillis / numberOfKids;
 
             int score = iterativeDeepeningSearch(((ChessTree) childTree), startTime, tree.getPlayer(), timeLimitForEachMove);
 
@@ -100,8 +80,7 @@ public class IterativeDeepener {
 
 
 
-    int iterativeDeepeningSearch (ChessTree tree, long startTime, long timeLimitMillis) {
-        int originalPlayer = tree.getPlayer();
+    int iterativeDeepeningSearch (ChessTree tree, long startTime, int originalPlayer, long timeLimitMillis) {
         long endTime = startTime + timeLimitMillis;
         int scoreOfBestMove = 0;
         int depthToSearchTo = 1;

@@ -14,7 +14,7 @@ public class Evaluator {
     private static final int PAWN   = ChessBoard.PAWN;
     private static final int EMPTY  = ChessBoard.EMPTY;
 
-    private static final int MATE = -1000000;
+    static final int MATE = -1000000;
 
     public int eval(ChessBoard board) {
         if (isInMate(board)) {

@@ -4,8 +4,10 @@ import java.util.List;
 
 public class ChessTree<T> extends Tree<ChessBoard> {
 
+    private final int player;
     private typeOfNode typeOfNode;
     private int depth, score, rippleScore;
+    private boolean pruneMe;
     private Evaluator evaluator;
     private Move creatorMove;
 
@@ -15,6 +17,8 @@ public class ChessTree<T> extends Tree<ChessBoard> {
         this.evaluator = new Evaluator();
         this.depth = 0;
         this.typeOfNode = typeOfNode.ROOT;
+        this.pruneMe = false;
+        this.player = data.getTurn();
         scoreMe();
     }
 
@@ -143,6 +147,18 @@ public class ChessTree<T> extends Tree<ChessBoard> {
 
     public void setCreatorMove(Move creatorMove) {
         this.creatorMove = creatorMove;
+    }
+
+    public boolean isPruneMe() {
+        return pruneMe;
+    }
+
+    public void setPruneMe(boolean pruneMe) {
+        this.pruneMe = pruneMe;
+    }
+
+    public int getPlayer() {
+        return player;
     }
 
     enum typeOfNode {
