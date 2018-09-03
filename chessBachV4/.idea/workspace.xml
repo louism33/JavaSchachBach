@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="355304f1-03d4-4f30-acd8-9a3b8b97158b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chess/IterativeDeepenerTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/ChessTree$typeOfNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV4/chess/ChessTree$typeOfNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/ChessTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV4/chess/ChessTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV4/chess/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/Evaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV4/chess/Evaluator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/IterativeDeepener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV4/chess/IterativeDeepener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV4/chess/NegaMaxer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/ChessTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/ChessTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Evaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/NegaMaxer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/NegaMaxer.java" afterDir="false" />
-    </list>
+    <list default="true" id="355304f1-03d4-4f30-acd8-9a3b8b97158b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +18,7 @@
     <session id="-876773019">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.22" value="1" />
@@ -84,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            <state relative-caret-position="106">
+              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -106,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepenerTwo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1416">
-              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
             </state>
           </provider>
         </entry>
@@ -248,32 +234,6 @@
             <path>
               <item name="chessBachV4" type="b2602c69:ProjectViewProjectNode" />
               <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chessBachV4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chessBachV4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chessBachV4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
-              <item name="chess" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chessBachV4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chessBachV4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -291,7 +251,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535999985043" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536000047885" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -410,18 +370,17 @@
       <workItem from="1535839056081" duration="45000" />
       <workItem from="1535878541932" duration="25885000" />
       <workItem from="1535952449523" duration="2588000" />
-      <workItem from="1535993236575" duration="2774000" />
+      <workItem from="1535993236575" duration="3202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31292000" />
+    <option name="totallyTimeSpent" value="31720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17424242" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17424242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -502,7 +461,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/chess/IterativeDeepener.java</url>
-          <line>137</line>
+          <line>138</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -611,7 +570,7 @@
     <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepenerTwo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1416">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
         </state>
       </provider>
     </entry>
@@ -634,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        <state relative-caret-position="106">
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
         </state>
       </provider>
     </entry>
