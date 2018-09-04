@@ -54,10 +54,6 @@ public class Engine {
             ((List<ChessBoard>) board.generateMoves()).get(0);
         }
 
-
-
-
-
         return search(startTime, allocated);
     }
 
@@ -72,7 +68,15 @@ public class Engine {
         iterativeDeepener = new IterativeDeepener();
         NegaMaxer negaMaxer = new NegaMaxer();
 
+
+
+
+
         iterativeDeepener.expandTree(tree, startTime, timeLimitMillis);
+
+
+
+
 
         long t1 = System.currentTimeMillis();
         if (timeDetails) {
@@ -81,7 +85,13 @@ public class Engine {
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
         }
 
+
+
+
         Move mostDesirableMove = negaMaxer.performNegaMaxMoveSearch(tree);
+
+
+
 
         if (timeDetails) {
             long t2 = System.currentTimeMillis();

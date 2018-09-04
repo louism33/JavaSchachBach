@@ -1,5 +1,6 @@
 package chess;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChessTree<T> extends Tree<ChessBoard> {
@@ -8,6 +9,7 @@ public class ChessTree<T> extends Tree<ChessBoard> {
     private int depth, score, rippleScore;
     private Evaluator evaluator;
     private Move creatorMove;
+    public int alphaBetaScore = 0;
 
 
     public ChessTree(ChessBoard data) {
@@ -49,6 +51,10 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             };
             this.addChild(childTree);
         }
+    }
+
+    void rankChildren(){
+
     }
 
     int totalCount (){
@@ -94,6 +100,21 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             return this.getData() == ct.getData();
         }
         return false;
+    }
+
+    public List<Integer> getChildrenScores(){
+        List<Integer> list = new ArrayList<>();
+        if (this.getChildren().size() > 0) {
+
+
+            for (Tree<ChessBoard> kid : this.getChildren()) {
+
+                int kidScore = ((ChessTree<ChessBoard>) kid).getScore();
+                list.add(kidScore);
+            }
+        }
+        return list;
+
     }
 
 
