@@ -56,7 +56,7 @@ public class IterativeDeepener {
 
         int depthToSearchTo = 1;
 
-        while ( depthToSearchTo <= 6) {
+        while ( depthToSearchTo <= 3) {
 
 //            long currentTime = System.currentTimeMillis();
 //            timeUp = (currentTime - startTime > timeLimitMillis);
@@ -100,7 +100,9 @@ public class IterativeDeepener {
 //            }
 
         if (howDeep <= 1){
-            return tree.getScore();
+            int col = (tree.getData().turn == originalPlayer) ? -1 : 1;
+
+            return tree.getScore() * -col;
         }
 
         if (tree.getChildren().size() == 0) {
@@ -132,23 +134,20 @@ public class IterativeDeepener {
 
 
                 alpha = Math.max(alpha,
-                        -depthFirstSearch((ChessTree) childTree, originalPlayer, howDeep - 1,
+                        depthFirstSearch((ChessTree) childTree, originalPlayer, howDeep - 1,
                                 alpha, beta, startTime, timeLimitMillis));
 
                 tempB = alpha;
 
-                if (tempA != tempB){
+                if (tempA != tempB){ // do not change this
                     if (dfsWinningMove != moveBeingExpanded){
-//                        System.out.println("alpha was "+ tempA + " but now it is "+tempB);
-//                        System.out.println("1 " + moveBeingExpanded + " is pretty good.");
-//                        System.out.println(" 2 DFSMOVE: "+dfsWinningMove);
                         dfsWinningMove.copyMove(moveBeingExpanded);
-//                        System.out.println("   3      DFSMOVE: "+dfsWinningMove);
                     }
                 }
 
+//                System.out.println(alpha);
 
-//                if (alpha > beta){
+//                if (alpha >= beta){
 //                    System.out.println("---BREAK in a ---  a "+alpha+" b "+beta+  " ---------------------------");
 //                    System.out.println(babyTree.getCreatorMove());
 //                    break;
@@ -189,16 +188,18 @@ public class IterativeDeepener {
 
 
                 beta = Math.min(beta,
-                        -depthFirstSearch((ChessTree) childTree, originalPlayer, howDeep - 1,
+                        depthFirstSearch((ChessTree) childTree, originalPlayer, howDeep - 1,
                                 alpha, beta, startTime, timeLimitMillis));
 
+
+//                System.out.println("    "+beta);
 //                tempB = beta;
 //
 //                if (tempA != tempB && dfsWinningMove != moveBeingExpanded){
 //                    dfsWinningMove.copyMove(moveBeingExpanded);
 //                }
 //
-//                if (alpha > beta){
+//                if (alpha >= beta){
 //                    System.out.println("---BREAK in b ---  a "+alpha+" b "+beta+  " ---------------------------");
 //                    System.out.println(babyTree.getCreatorMove());
 //                    break;
