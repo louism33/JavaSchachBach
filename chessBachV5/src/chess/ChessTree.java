@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ChessTree<T> extends Tree<ChessBoard> {
@@ -48,13 +49,23 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             childTree.setTypeOfNode(typeOfNode.LEAF);
             if (this.typeOfNode == typeOfNode.LEAF){
                 this.typeOfNode = typeOfNode.NODE;
-            };
+            }
             this.addChild(childTree);
         }
     }
 
     void rankChildren(){
 
+        List<Tree<ChessBoard>> kids = this.getChildren();
+
+        List<Integer> kidScores = new ArrayList<>();
+
+        for (Tree<ChessBoard> kidTree : kids){
+            kidScores.add(((ChessTree<T>) kidTree).score);
+        }
+
+        Collections.sort(kidScores);
+//        System.out.println(kidScores);
     }
 
     int totalCount (){

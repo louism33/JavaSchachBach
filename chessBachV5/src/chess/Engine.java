@@ -10,7 +10,7 @@ public class Engine {
     private static long startTime, allocated;
     private int increment;
 
-    private static final String programName = "Bach Version Three";
+    private static final String programName = "Bach Version Five";
 
     public String getName() {
         return programName;
