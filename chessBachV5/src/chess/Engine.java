@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 1000;
+        t = 5000;
 
         return (int) t;
     }
@@ -66,39 +66,17 @@ public class Engine {
 
         ChessTree<ChessBoard> tree = new ChessTree<>(board);
         iterativeDeepener = new IterativeDeepener();
-        NegaMaxer negaMaxer = new NegaMaxer();
 
-
-
-
-
-        iterativeDeepener.expandTree(tree, startTime, timeLimitMillis);
-
-
-
-
+        Move mostDesirableMove = iterativeDeepener.expandTree(tree, startTime, timeLimitMillis);
 
         long t1 = System.currentTimeMillis();
         if (timeDetails) {
             long z = (t1 - startTime);
             System.out.println("Deepening the tree took " + z + " milliseconds.");
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
-        }
-
-
-
-
-        Move mostDesirableMove = negaMaxer.performNegaMaxMoveSearch(tree);
-
-
-
-
-        if (timeDetails) {
-            long t2 = System.currentTimeMillis();
-            long zz = (t2 - t1);
-            System.out.println("Extracting the scores took " + zz + " milliseconds.");
             timeInfo(tree, startTime);
         }
+
         System.out.println(tree);
         return mostDesirableMove;
     }

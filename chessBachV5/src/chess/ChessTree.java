@@ -1,27 +1,23 @@
 package chess;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class ChessTree<T> extends Tree<ChessBoard> {
 
     private typeOfNode typeOfNode;
-    private int depth, score, rippleScore;
+    private int score;
     private Evaluator evaluator;
     private Move creatorMove;
-    public int alphaBetaScore = 0;
 
 
-    public ChessTree(ChessBoard data) {
+    ChessTree(ChessBoard data) {
         super(data);
         this.evaluator = new Evaluator();
-        this.depth = 0;
         this.typeOfNode = typeOfNode.ROOT;
-        scoreMe();
     }
 
-    void scoreMe(){
+    private void scoreMe(){
         if (this.typeOfNode == typeOfNode.ROOT) {
             this.score = evaluator.eval(this.getData());
         } else {
@@ -31,7 +27,6 @@ public class ChessTree<T> extends Tree<ChessBoard> {
                     this.creatorMove,
                     ((ChessTree<ChessBoard>) this.getParent()).getScore());
         }
-        this.rippleScore = this.score;
     }
 
     void makeChildren(){
@@ -42,30 +37,19 @@ public class ChessTree<T> extends Tree<ChessBoard> {
             ChessTree childTree = new ChessTree(newBoard);
             childTree.setCreatorMove(move);
             childTree.setParent(this);
-            childTree.setDepth(this.depth+1);
-            if ((this.depth + 1) % 2 == 0){
-                childTree.setRippleScore(childTree.getRippleScore()*(-1));
-            }
             childTree.setTypeOfNode(typeOfNode.LEAF);
             if (this.typeOfNode == typeOfNode.LEAF){
                 this.typeOfNode = typeOfNode.NODE;
             }
             this.addChild(childTree);
+            childTree.scoreMe();
         }
     }
 
     void rankChildren(){
-
-        List<Tree<ChessBoard>> kids = this.getChildren();
-
-        List<Integer> kidScores = new ArrayList<>();
-
-        for (Tree<ChessBoard> kidTree : kids){
-            kidScores.add(((ChessTree<T>) kidTree).score);
-        }
-
-        Collections.sort(kidScores);
-//        System.out.println(kidScores);
+        Collections.sort(this.getChildren(), (a, b) ->
+                ((ChessTree<ChessBoard>) a).getScore() - ((ChessTree<ChessBoard>) b).getScore()
+        );
     }
 
     int totalCount (){
@@ -95,8 +79,6 @@ public class ChessTree<T> extends Tree<ChessBoard> {
     public String toString() {
         String ans = (""
 //                + "Board:\n" + this.getData()
-//                + "\nScore of the current board (the bigger the better):\n" +this.getScore()
-//                + "\nRipple score of the current board (the bigger the better):\n" +this.getRippleScore()
                 + "\nNumber Of Children:\n"+this.getChildren().size()
                 + "\nTotal Number of Boards in Tree:\n" + this.totalCount()
                 + "\nOf which leaves:\n" + this.totalLeafCount()
@@ -113,67 +95,23 @@ public class ChessTree<T> extends Tree<ChessBoard> {
         return false;
     }
 
-    public List<Integer> getChildrenScores(){
-        List<Integer> list = new ArrayList<>();
-        if (this.getChildren().size() > 0) {
-
-
-            for (Tree<ChessBoard> kid : this.getChildren()) {
-
-                int kidScore = ((ChessTree<ChessBoard>) kid).getScore();
-                list.add(kidScore);
-            }
-        }
-        return list;
-
-    }
-
-
-    private void setDepth(int depth) {
-        this.depth = depth;
-    }
-
-    public int getDepth() {
-        return depth;
-    }
-
-    private int getRippleScore() {
-        return rippleScore;
-    }
-
     private void setTypeOfNode(ChessTree.typeOfNode typeOfNode) {
         this.typeOfNode = typeOfNode;
     }
 
-    public void setRippleScore(int rippleScore) {
-        this.rippleScore = rippleScore;
-    }
-
-    public ChessTree.typeOfNode getTypeOfNode() {
+    ChessTree.typeOfNode getTypeOfNode() {
         return typeOfNode;
     }
 
-    public int getScore() {
+    int getScore() {
         return score;
     }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
-
-    public Evaluator getEvaluator() {
-        return evaluator;
-    }
-
-    public void setEvaluator(Evaluator evaluator) {
-        this.evaluator = evaluator;
-    }
-
-    public Move getCreatorMove() {
+    Move getCreatorMove() {
         return creatorMove;
     }
 
-    public void setCreatorMove(Move creatorMove) {
+    void setCreatorMove(Move creatorMove) {
         this.creatorMove = creatorMove;
     }
 
