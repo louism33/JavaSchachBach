@@ -5,12 +5,12 @@ import java.util.List;
 public class Engine {
 
     private ChessBoard board;
-    private IterativeDeepener iterativeDeepener;
+    private IterativeDeepenerTwo iterativeDeepener;
 
     private static long startTime, allocated;
     private int increment;
 
-    private static final String programName = "Bach Version Five";
+    private static final String programName = "Bach Version Six";
 
     public String getName() {
         return programName;
@@ -64,20 +64,18 @@ public class Engine {
 
         boolean timeDetails = true;
 
-        ChessTree<ChessBoard> tree = new ChessTree<>(board);
-        iterativeDeepener = new IterativeDeepener();
+        iterativeDeepener = new IterativeDeepenerTwo();
 
-        Move mostDesirableMove = iterativeDeepener.expandTree(tree, startTime, timeLimitMillis);
+        Move mostDesirableMove = iterativeDeepener.expandBoard(board, startTime, timeLimitMillis);
+
 
         long t1 = System.currentTimeMillis();
         if (timeDetails) {
             long z = (t1 - startTime);
             System.out.println("Deepening the tree took " + z + " milliseconds.");
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
-            timeInfo(tree, startTime);
         }
 
-        System.out.println(tree);
         return mostDesirableMove;
     }
 
@@ -85,16 +83,16 @@ public class Engine {
 
 
 
-    void timeInfo(ChessTree<ChessBoard> tree, long startTime){
-
-        long endTime = System.currentTimeMillis();
-        long totalTime = endTime - startTime;
-        long totalTimeSeconds = (endTime - startTime) / 1000;
-        System.out.println("The whole process took " + totalTime + " milliseconds.");
-
-        if (totalTime > 0 && totalTimeSeconds > 0) {
-            System.out.println("This is approximately " + (tree.totalCount() / totalTimeSeconds) + " boards per second.");
-        }
-    }
+//    void timeInfo(ChessTree<ChessBoard> tree, long startTime){
+//
+//        long endTime = System.currentTimeMillis();
+//        long totalTime = endTime - startTime;
+//        long totalTimeSeconds = (endTime - startTime) / 1000;
+//        System.out.println("The whole process took " + totalTime + " milliseconds.");
+//
+//        if (totalTime > 0 && totalTimeSeconds > 0) {
+//            System.out.println("This is approximately " + (tree.totalCount() / totalTimeSeconds) + " boards per second.");
+//        }
+//    }
 
 }
