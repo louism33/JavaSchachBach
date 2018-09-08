@@ -161,7 +161,6 @@ public class Evaluator {
         pieceValue[KING]   = 35;
         pieceValue[EMPTY]  = 0;
     }
- // completely remove all negatives, as they make you less interested in taking anything
     private static int bishoppos[] = {
             -20,-10,-10,-10,-10,-10,-10,-20,
             -10,  5,  0,  0,  0,  0,  5,-10,

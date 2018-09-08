@@ -5,7 +5,7 @@ import java.util.List;
 public class Engine {
 
     private ChessBoard board;
-    private IterativeDeepenerTwo iterativeDeepener;
+    private IterativeDeepener iterativeDeepener;
 
     private static long startTime, allocated;
     private int increment;
@@ -64,7 +64,7 @@ public class Engine {
 
         boolean timeDetails = true;
 
-        iterativeDeepener = new IterativeDeepenerTwo();
+        iterativeDeepener = new IterativeDeepener();
 
         Move mostDesirableMove = iterativeDeepener.expandBoard(board, startTime, timeLimitMillis);
 

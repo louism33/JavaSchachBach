@@ -1,8 +1,9 @@
 package chess;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class IterativeDeepenerTwo {
+public class IterativeDeepener {
 
     private int maxDepthReached;
     private Move dfsWinningMove;
@@ -13,15 +14,16 @@ public class IterativeDeepenerTwo {
 
     public static void main (String[] args){
 
-        IterativeDeepenerTwo idt = new IterativeDeepenerTwo();
+        IterativeDeepener idt = new IterativeDeepener();
     }
 
-    IterativeDeepenerTwo(){
+    IterativeDeepener(){
         evalutator = new Evaluator();
 
         ChessBoard b = new ChessBoard();
 
-        Move blub = expandBoard(b, 0, 0);
+        long startTime = System.currentTimeMillis();
+        Move blub = expandBoard(b, startTime, 1000000000);
 
 
     }
@@ -45,7 +47,7 @@ public class IterativeDeepenerTwo {
         int beta = Integer.MAX_VALUE;
         int depthToSearchTo = 1;
 
-        while (!timeUp){ // && depthToSearchTo <= 5) {
+        while (!timeUp && depthToSearchTo <= 6) {
 
             long currentTime = System.currentTimeMillis();
 
@@ -58,9 +60,12 @@ public class IterativeDeepenerTwo {
             int player = board.getTurn();
 
 
+
             int score = depthFirstSearchBoard(board, board, player, depthToSearchTo, alpha, beta, startTime, timeLimitMillis);
 
             bestMove.copyMove(dfsWinningMove);
+
+            System.out.println(bestMove);
 
             if (score == Integer.MAX_VALUE || score == MATE){
                 System.out.println("MATE FOUND");
@@ -75,20 +80,29 @@ public class IterativeDeepenerTwo {
     }
 
 
+
+
     private int depthFirstSearchBoard(ChessBoard motherBoard, ChessBoard board, int originalPlayer, int howDeep, int alpha, int beta, long startTime, long timeLimitMillis) {
 
         if (howDeep <= 1) {
             int col = (board.getTurn() == originalPlayer) ? 1 : -1;
-            return evalutator.eval(board) * col; // delta eval
+            return evalutator.eval(board) * col;
         }
 
 
         if (board.getTurn() == originalPlayer) {
             int value = Integer.MIN_VALUE;
 
-            List<Move> moves = board.generateMoves();
+            List<Move> unrankedMoves = board.generateMoves();
+            List<Move> moves;
 
-//            rankMoves();
+            // killer heuristic = start search with winner of last search
+            if (board != motherBoard) {
+                moves = rankMoves(unrankedMoves, null);
+            } else {
+                moves = rankMoves(unrankedMoves, dfsWinningMove);
+            }
+
 
             for (Move move : moves) {
                 long currentTime = System.currentTimeMillis();
@@ -118,8 +132,9 @@ public class IterativeDeepenerTwo {
 
             int value = Integer.MIN_VALUE;
 
-            List<Move> moves = board.generateMoves();
-//            rankMoves();
+            List<Move> unrankedMoves = board.generateMoves();
+            List<Move> moves = rankMoves(unrankedMoves, null);
+
 
             for (Move move : moves) {
                 long currentTime = System.currentTimeMillis();
@@ -146,6 +161,46 @@ public class IterativeDeepenerTwo {
             return value;
         }
     }
+
+
+    private List<Move> rankMoves (List<Move> moves, Move killerMove) {
+        List<Move> rankedMoves = new ArrayList<>(moves.size());
+        List<Move> temp = new ArrayList<>();
+
+        
+
+        if (killerMove != null){
+            rankedMoves.add(killerMove);
+        }
+        for (Move move : moves){
+            if (killerMove != null) {
+                if (move.equals(killerMove)) {
+                    continue;
+                }
+            }
+
+            if (move.capture){
+                rankedMoves.add(move);
+                continue;
+            }
+            if (move.destx >= 2 && move.destx <= 5 && move.desty >= 2 && move.desty <= 5){ //destination is centre of board
+                rankedMoves.add(move);
+                continue;
+            }
+            if (move.destx >= 2 && move.destx <= 5){
+                rankedMoves.add(move);
+                continue;
+            }
+            if (move.desty >= 2 && move.desty <= 5){
+                rankedMoves.add(move);
+                continue;
+            }
+            temp.add(move);
+        }
+        rankedMoves.addAll(temp);
+        return rankedMoves;
+    }
+
 
 
     public int getMaxDepthReached() {
