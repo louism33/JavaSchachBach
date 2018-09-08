@@ -1,7 +1,5 @@
 package chess;
-
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /* The code contained here can generate all the legal moves
    from a given chess position.  It does not handle promotion

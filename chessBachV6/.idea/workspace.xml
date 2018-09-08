@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="917edc80-5798-4043-8d9b-1bfeb89d6d8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/Graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Graphics.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,6 +21,7 @@
     <session id="-1269800027">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -70,9 +71,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#6460#6461#0" expanded="true" />
                 <element signature="e#6498#6499#0" expanded="true" />
               </folding>
@@ -303,10 +305,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536426748038" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536426819011" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -383,16 +390,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536396742034</updated>
-      <workItem from="1536396746252" duration="18891000" />
+      <workItem from="1536396746252" duration="19036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18891000" />
+    <option name="totallyTimeSpent" value="19036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -400,7 +406,7 @@
       <window_info id="Favorites" sideWeight="0.5025" side_tool="true" weight="0.32855093" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975" weight="0.410947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975" visible="true" weight="0.41060606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -484,9 +490,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#6460#6461#0" expanded="true" />
             <element signature="e#6498#6499#0" expanded="true" />
           </folding>
