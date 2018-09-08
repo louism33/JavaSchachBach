@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="917edc80-5798-4043-8d9b-1bfeb89d6d8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,23 +28,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="7" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2272" />
+          <entry key="java" value="2328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2272" />
+          <entry key="JAVA" value="2328" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="450">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#495#496#0" expanded="true" />
                 <element signature="e#528#529#0" expanded="true" />
@@ -69,10 +70,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#6460#6461#0" expanded="true" />
                 <element signature="e#6498#6499#0" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chess/Evaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="567">
+              <caret line="170" column="35" selection-start-line="170" selection-start-column="34" selection-end-line="170" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -113,9 +113,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/chess/ChessTree.java" />
         <option value="$PROJECT_DIR$/src/chess/IterativeDeepenerTwo.java" />
-        <option value="$PROJECT_DIR$/src/chess/Engine.java" />
         <option value="$PROJECT_DIR$/src/chess/Evaluator.java" />
         <option value="$PROJECT_DIR$/src/chess/IterativeDeepener.java" />
+        <option value="$PROJECT_DIR$/src/chess/Engine.java" />
       </list>
     </option>
   </component>
@@ -125,9 +125,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="width" value="1199" />
+    <option name="width" value="745" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -303,7 +303,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536426034912" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536426748038" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -320,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IterativeDeepener">
+  <component name="RunManager" selected="Application.StandAlone">
     <configuration name="IterativeDeepener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chess.IterativeDeepener" />
       <module name="chessBachV6" />
@@ -367,8 +367,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IterativeDeepener" />
         <item itemvalue="Application.StandAlone" />
+        <item itemvalue="Application.IterativeDeepener" />
         <item itemvalue="Application.IterativeDeepenerTwo" />
       </list>
     </recent_temporary>
@@ -383,24 +383,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536396742034</updated>
-      <workItem from="1536396746252" duration="18181000" />
+      <workItem from="1536396746252" duration="18891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18181000" />
+    <option name="totallyTimeSpent" value="18891000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1199" height="741" extended-state="4" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="UI Designer" />
-      <window_info id="Favorites" sideWeight="0.5025" side_tool="true" weight="0.32955974" />
+      <window_info id="Favorites" sideWeight="0.5025" side_tool="true" weight="0.32855093" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975" weight="0.41132075" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975" weight="0.410947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -450,6 +450,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/chess/StandAlone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -459,15 +466,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/Evaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="567">
+          <caret line="170" column="35" selection-start-line="170" selection-start-column="34" selection-end-line="170" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="450">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#495#496#0" expanded="true" />
             <element signature="e#528#529#0" expanded="true" />
@@ -477,10 +484,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/IterativeDeepener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        <state relative-caret-position="30">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#6460#6461#0" expanded="true" />
             <element signature="e#6498#6499#0" expanded="true" />
           </folding>

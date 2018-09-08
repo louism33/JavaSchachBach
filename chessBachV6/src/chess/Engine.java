@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 10000;
+        t = 100;
 
         return (int) t;
     }

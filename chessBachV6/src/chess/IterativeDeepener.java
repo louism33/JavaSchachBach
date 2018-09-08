@@ -1,8 +1,6 @@
 package chess;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class IterativeDeepener {
@@ -14,32 +12,15 @@ public class IterativeDeepener {
 
     private Evaluator evalutator;
 
-    public static void main (String[] args){
-
-        IterativeDeepener idt = new IterativeDeepener();
-    }
-
-    IterativeDeepener(){
-        evalutator = new Evaluator();
-
-        ChessBoard b = new ChessBoard();
-
-        long startTime = System.currentTimeMillis();
-        Move blub = expandBoard(b, startTime, 1000000000);
-
-
-        System.out.println(blub);
-    }
-
-
     Move expandBoard(ChessBoard board, long startTime, long timeLimitMillis){
         dfsWinningMove = ((List<Move>) board.generateMoves()).get(0);
+
+        evalutator = new Evaluator();
 
         Move bestMove = iterativeDeepeningSearchBoard(board, startTime, timeLimitMillis);
 
         return bestMove;
     }
-
 
 
     private Move iterativeDeepeningSearchBoard(ChessBoard board, long startTime, long timeLimitMillis) {
@@ -50,7 +31,7 @@ public class IterativeDeepener {
         int beta = Integer.MAX_VALUE;
         int depthToSearchTo = 1;
 
-        while (!timeUp && depthToSearchTo <= 5) {
+        while (!timeUp) {
 
             long currentTime = System.currentTimeMillis();
 
@@ -61,18 +42,11 @@ public class IterativeDeepener {
             }
 
             int player = board.getTurn();
-
-
-
-            total = 0;
             int score = depthFirstSearchBoard(board, board, player, depthToSearchTo, alpha, beta, startTime, timeLimitMillis);
 
             bestMove.copyMove(dfsWinningMove);
 
-            System.out.println(bestMove);
-
             if (score == Integer.MAX_VALUE || score == MATE){
-                System.out.println("MATE FOUND");
                 return bestMove;
             }
 
@@ -80,30 +54,22 @@ public class IterativeDeepener {
             if (depthToSearchTo > maxDepthReached) maxDepthReached = depthToSearchTo;
             depthToSearchTo++;
 
-            System.out.println(total);
         }
         return bestMove;
     }
 
 
-    int total = 0;
-
     private int depthFirstSearchBoard(ChessBoard motherBoard, ChessBoard board, int originalPlayer, int howDeep, int alpha, int beta, long startTime, long timeLimitMillis) {
 
         if (howDeep <= 1) {
-            total++;
             int col = (board.getTurn() == originalPlayer) ? 1 : -1;
             return evalutator.eval(board) * col;
         }
 
-
         if (board.getTurn() == originalPlayer) {
             int value = Integer.MIN_VALUE;
-
             List<Move> unrankedMoves = board.generateMoves();
             List<Move> moves;
-
-
             if (containsMove(unrankedMoves, dfsWinningMove)){
                 moves = rankMoves(unrankedMoves, dfsWinningMove);
             }
@@ -112,8 +78,6 @@ public class IterativeDeepener {
             }
 
             for (Move move : moves) {
-
-
                 long currentTime = System.currentTimeMillis();
                 long timeLeft = startTime + timeLimitMillis - currentTime;
                 if (timeLeft < 0) {
@@ -121,32 +85,24 @@ public class IterativeDeepener {
                 }
                 ChessBoard childBoard = new ChessBoard(board);
                 childBoard.makeMove(move);
-
                 value = Math.max(value,
                         depthFirstSearchBoard(motherBoard, childBoard, originalPlayer, howDeep - 1, alpha, beta, startTime, timeLimitMillis));
-
                 if (value > alpha) {
                     alpha = value;
                     if (board == motherBoard){
                         dfsWinningMove.copyMove(move);
                     }
                 }
-
                 if (alpha >= beta) {
                     break;
                 }
             }
             return value;
         } else {
-
             int value = Integer.MIN_VALUE;
-
             List<Move> unrankedMoves = board.generateMoves();
             List<Move> moves = rankMoves(unrankedMoves, null);
-
             for (Move move : moves) {
-
-
                 long currentTime = System.currentTimeMillis();
                 long timeLeft = startTime + timeLimitMillis - currentTime;
                 if (timeLeft < 0) {
@@ -154,7 +110,6 @@ public class IterativeDeepener {
                 }
                 ChessBoard childBoard = new ChessBoard(board);
                 childBoard.makeMove(move);
-
                 value = Math.min(value,
                         depthFirstSearchBoard(motherBoard, childBoard, originalPlayer, howDeep - 1, alpha, beta, startTime, timeLimitMillis));
 
@@ -179,12 +134,9 @@ public class IterativeDeepener {
         return false;
     }
 
-
     private List<Move> rankMoves (List<Move> moves, Move killerMove) {
         List<Move> rankedMoves = new ArrayList<>(moves.size());
         List<Move> temp = new ArrayList<>();
-
-
 
         if (killerMove != null){
             rankedMoves.add(killerMove);
@@ -195,7 +147,6 @@ public class IterativeDeepener {
                     continue;
                 }
             }
-
             if (move.capture){
                 rankedMoves.add(move);
                 continue;
@@ -219,8 +170,7 @@ public class IterativeDeepener {
     }
 
 
-
-    public int getMaxDepthReached() {
+    int getMaxDepthReached() {
         return maxDepthReached;
     }
 }
