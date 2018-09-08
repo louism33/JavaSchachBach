@@ -7,6 +7,8 @@ public class IterativeDeepener {
     private int maxDepthReached;
     private Move dfsWinningMove;
 
+    private int MATE = Evaluator.MATE;
+
     Move expandTree(ChessTree<ChessBoard> tree, long startTime, long timeLimitMillis) {
         dfsWinningMove = ((List<Move>) tree.getData().generateMoves()).get(0);
 
@@ -37,9 +39,15 @@ public class IterativeDeepener {
             int player = ((ChessBoard) tree.getData()).turn;
 
 
-            depthFirstSearch(tree, player, depthToSearchTo, alpha, beta, startTime, timeLimitMillis);
+            int score = depthFirstSearch(tree, player, depthToSearchTo, alpha, beta, startTime, timeLimitMillis);
 
             bestMove.copyMove(dfsWinningMove);
+
+            if (score == Integer.MAX_VALUE || score == MATE){
+                System.out.println("MATE FOUND");
+                return bestMove;
+            }
+
 
             if (depthToSearchTo > maxDepthReached) maxDepthReached = depthToSearchTo;
             depthToSearchTo++;

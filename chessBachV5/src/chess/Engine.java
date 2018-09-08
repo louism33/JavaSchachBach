@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 5000;
+        t = 10000;
 
         return (int) t;
     }
@@ -92,7 +92,7 @@ public class Engine {
         long totalTimeSeconds = (endTime - startTime) / 1000;
         System.out.println("The whole process took " + totalTime + " milliseconds.");
 
-        if (totalTime > 0) {
+        if (totalTime > 0 && totalTimeSeconds > 0) {
             System.out.println("This is approximately " + (tree.totalCount() / totalTimeSeconds) + " boards per second.");
         }
     }
