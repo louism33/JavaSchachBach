@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 100;
+        t = 15000;
 
         return (int) t;
     }
@@ -59,7 +59,6 @@ public class Engine {
 
 
 
-
     Move search(long startTime, long timeLimitMillis){
 
         boolean timeDetails = true;
@@ -72,27 +71,11 @@ public class Engine {
         long t1 = System.currentTimeMillis();
         if (timeDetails) {
             long z = (t1 - startTime);
-            System.out.println("Deepening the tree took " + z + " milliseconds.");
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
         }
 
         return mostDesirableMove;
     }
 
-
-
-
-
-//    void timeInfo(ChessTree<ChessBoard> tree, long startTime){
-//
-//        long endTime = System.currentTimeMillis();
-//        long totalTime = endTime - startTime;
-//        long totalTimeSeconds = (endTime - startTime) / 1000;
-//        System.out.println("The whole process took " + totalTime + " milliseconds.");
-//
-//        if (totalTime > 0 && totalTimeSeconds > 0) {
-//            System.out.println("This is approximately " + (tree.totalCount() / totalTimeSeconds) + " boards per second.");
-//        }
-//    }
 
 }

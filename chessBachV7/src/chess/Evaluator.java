@@ -16,7 +16,18 @@ public class Evaluator {
 
     static final int MATE = -1000000;
 
+
+
     public int eval(ChessBoard board) {
+
+        int boardScore = 0;
+
+        boardScore += basicEval(board);
+
+        return boardScore;
+    }
+
+    private int basicEval(ChessBoard board) {
         if (isInMate(board)) {
             return MATE;
         }
@@ -57,40 +68,6 @@ public class Evaluator {
 
     static boolean isEndGame(ChessBoard b) {
         return (b.getPieces(1).length + b.getPieces(0).length) < 12;
-    }
-
-    int deltaEval (ChessBoard child, ChessBoard parent, Move originatorMove, int parentScore) {
-        if (isInMate(child)) {
-            return MATE;
-        }
-        if (isStalemate(child)) {
-            return 0;
-        }
-
-
-        boolean endGame = isEndGame(child);
-
-        int myTurn = child.getTurn();
-        int enemyTurn = 1 - myTurn;
-
-        SquareDesc pieceInFirstLocation = parent.getSquare(originatorMove.srcx, originatorMove.srcy);
-        int movedPieceScore = pieceValue[pieceInFirstLocation.type];
-        int preMovePieceValue = movedPieceScore + locationValue(pieceInFirstLocation, true, enemyTurn, endGame);
-        SquareDesc pieceInSecondLocation = child.getSquare(originatorMove.destx, originatorMove.desty);
-        int postMovePieceValue = movedPieceScore + locationValue(pieceInSecondLocation, true, enemyTurn, endGame);
-
-        int deltaEnemy = 0;
-
-        if (originatorMove.capture){
-            int takenPieceScore = pieceValue[pieceInSecondLocation.type];
-            int enemyCapturedPieceValue = takenPieceScore + locationValue(pieceInSecondLocation, false, enemyTurn, endGame);
-            deltaEnemy -= enemyCapturedPieceValue;
-        }
-
-        int deltaMyPiece = postMovePieceValue - preMovePieceValue;
-        int boardScore = -(parentScore + deltaEnemy + deltaMyPiece);
-
-        return boardScore;
     }
 
     boolean isStalemate (ChessBoard b) {
@@ -151,6 +128,7 @@ public class Evaluator {
         else return 6666666;
     }
 
+
     private static int[] pieceValue = new int[7];
     static {
         pieceValue[PAWN]   = 10;
@@ -161,6 +139,9 @@ public class Evaluator {
         pieceValue[KING]   = 35;
         pieceValue[EMPTY]  = 0;
     }
+
+
+
     private static int bishoppos[] = {
             -20,-10,-10,-10,-10,-10,-10,-20,
             -10,  5,  0,  0,  0,  0,  5,-10,
