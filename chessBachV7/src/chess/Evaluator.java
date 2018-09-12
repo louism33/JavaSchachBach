@@ -41,12 +41,10 @@ public class Evaluator {
 //                + pawnNumberBonus(board, myTurn) - pawnNumberBonus(board, enemyTurn)
 //                + pawnStructureBonus(board, myTurn) - pawnStructureBonus(board, enemyTurn)
 //                + basicImbalance(board, myTurn) - basicImbalance(board, enemyTurn)
-//
 //                + check(board)
 //
 //                + casteled(board, myTurn) - casteled(board, enemyTurn)
-
-                + 1 - 1;
+        ;
 
         return boardScore;
     }
@@ -116,7 +114,7 @@ public class Evaluator {
 
 
     private boolean isEndGame(ChessBoard board) {
-        return totalPieces(board) < 12;
+        return totalPieces(board) < 8;
     }
 
     private boolean isStalemate (ChessBoard b) {
@@ -184,12 +182,12 @@ public class Evaluator {
 
     private static int[] pieceValue = new int[7];
     static {
-        pieceValue[PAWN]   = 10;
-        pieceValue[KNIGHT] = 32;
-        pieceValue[BISHOP] = 33;
-        pieceValue[ROOK]   = 50;
-        pieceValue[QUEEN]  = 90;
-        pieceValue[KING]   = 300;
+        pieceValue[PAWN]   = 100;
+        pieceValue[KNIGHT] = 320;
+        pieceValue[BISHOP] = 330;
+        pieceValue[ROOK]   = 500;
+        pieceValue[QUEEN]  = 900;
+        pieceValue[KING]   = 3000;
         pieceValue[EMPTY]  = 0;
     }
 

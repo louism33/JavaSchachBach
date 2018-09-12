@@ -33,7 +33,7 @@ public class Engine {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
 
-        t = 20000;
+        t = 1000000;
 
         return (int) t;
     }
@@ -41,6 +41,7 @@ public class Engine {
     public Move computeMove(int timeleft, int optime) {
         startTime = System.currentTimeMillis();
         allocated = allocateTime(timeleft, optime);
+
 
         if (StandAlone.startingBoard){
             Move move = (Math.random() < 0.5) ? ((List<Move>) board.generateMoves()).get(8)
@@ -72,6 +73,9 @@ public class Engine {
         if (timeDetails) {
             long z = (t1 - startTime);
             System.out.println("Max Depth Reached: " + iterativeDeepener.getMaxDepthReached());
+
+            System.out.println("Time: " + z + " millis, " + ((z)/1000) + " seconds");
+
         }
 
         return mostDesirableMove;
