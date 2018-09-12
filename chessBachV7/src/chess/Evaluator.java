@@ -17,60 +17,109 @@ public class Evaluator {
     static final int MATE = -1000000;
 
 
-
-    public int eval(ChessBoard board) {
-
-        int boardScore = 0;
-
-        boardScore += basicEval(board);
-
-        return boardScore;
+    int lazyEval(ChessBoard board){
+        return 0;
     }
 
-    private int basicEval(ChessBoard board) {
+
+    int eval(ChessBoard board) {
+
+        int boardScore = 0;
+        int myTurn = board.getTurn();
+        int enemyTurn = 1 - myTurn;
+
+
         if (isInMate(board)) {
             return MATE;
         }
         if (isStalemate(board)) {
             return 0;
         }
-        int myTurn = board.getTurn();
-        int enemyTurn = 1 - myTurn;
 
+        boardScore = materialAndPosition(board, myTurn) - materialAndPosition(board, enemyTurn)
+//                + bishopPair(board, myTurn) - bishopPair(board, enemyTurn)
+//                + pawnNumberBonus(board, myTurn) - pawnNumberBonus(board, enemyTurn)
+//                + pawnStructureBonus(board, myTurn) - pawnStructureBonus(board, enemyTurn)
+//                + basicImbalance(board, myTurn) - basicImbalance(board, enemyTurn)
+//
+//                + check(board)
+//
+//                + casteled(board, myTurn) - casteled(board, enemyTurn)
 
-        boolean endGame = isEndGame(board);
-
-        int maxMyPieces = board.getPieces(myTurn).length;
-        SquareDesc[] myPieces = board.getPieces(myTurn);
-        int maxEnemyPieces = board.getPieces(enemyTurn).length;
-        SquareDesc[] enemyPieces = board.getPieces(enemyTurn);
-        int friendlyScore = 0;
-        int enemyScore = 0;
-        int boardScore;
-
-        for (int p = 0; p < maxMyPieces; p ++) {
-            SquareDesc piece = myPieces[p];
-            int pieceTempScore = pieceValue[piece.type];
-            int pieceFinalScore = pieceTempScore + locationValue(piece, true, myTurn, endGame);
-            friendlyScore += pieceFinalScore;
-        }
-
-        for (int p = 0; p < maxEnemyPieces; p ++) {
-            SquareDesc piece = enemyPieces[p];
-            int pieceTempScore = pieceValue[piece.type];
-            int pieceFinalScore = pieceTempScore + locationValue(piece, false, myTurn, endGame);
-            enemyScore += pieceFinalScore;
-        }
-        boardScore = friendlyScore - enemyScore;
+                + 1 - 1;
 
         return boardScore;
     }
 
-    static boolean isEndGame(ChessBoard b) {
-        return (b.getPieces(1).length + b.getPieces(0).length) < 12;
+
+
+    private int casteled (ChessBoard board, int turn){
+
+        return (board.hascastled[turn]) ? 5 : 0;
     }
 
-    boolean isStalemate (ChessBoard b) {
+    private int bishopPair (ChessBoard board, int turn){
+        int b = 0;
+        for (SquareDesc piece : board.getPieces(turn)){
+            if (piece.type == BISHOP) b++;
+        }
+        return (b == 0 | b == 1) ? 0 : 5;
+    }
+
+    private int numberOfPawns(ChessBoard board, int turn){
+        int p = 0;
+        for (SquareDesc piece : board.getPieces(turn)){
+            if (piece.type == PAWN) p++;
+        }
+        return p;
+    }
+
+    private int pawnNumberBonus (ChessBoard board, int turn){
+        int n = numberOfPawns(board, turn);
+        return n;
+    }
+
+    private int pawnStructureBonus (ChessBoard board, int turn){
+        return 0;
+    }
+
+    private int basicImbalance(ChessBoard board, int turn){
+        int fac = 1;
+        return fac * (board.getPieces(turn).length);
+    }
+
+    private int totalPieces(ChessBoard board){
+        return (board.getPieces(board.getTurn()).length + board.getPieces(1-board.getTurn()).length);
+    }
+
+
+
+
+    private int materialAndPosition(ChessBoard board, int turn) {
+
+        boolean endGame = isEndGame(board);
+
+        int maxMyPieces = board.getPieces(turn).length;
+        SquareDesc[] myPieces = board.getPieces(turn);
+
+        int score = 0;
+
+        for (int p = 0; p < maxMyPieces; p ++) {
+            SquareDesc piece = myPieces[p];
+            int pieceTempScore = pieceValue[piece.type];
+            int pieceFinalScore = pieceTempScore + locationValue(piece, turn, endGame);
+            score += pieceFinalScore;
+        }
+        return score;
+    }
+
+
+
+    private boolean isEndGame(ChessBoard board) {
+        return totalPieces(board) < 12;
+    }
+
+    private boolean isStalemate (ChessBoard b) {
         Move[] moveArray;
         moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
         if (moveArray.length == 0 && !b.inCheck()) {
@@ -79,7 +128,11 @@ public class Evaluator {
         return false;
     }
 
-    boolean isInMate (ChessBoard b){
+    private int check (ChessBoard board){
+        return board.inCheck() ? -2 : 0;
+    }
+
+    private boolean isInMate (ChessBoard b){
         Move[] moveArray;
         moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
         if (moveArray.length == 0 && b.inCheck()) {
@@ -88,13 +141,13 @@ public class Evaluator {
         return false;
     }
 
-    private static int locationValue(SquareDesc piece, boolean friendly, int currentPlayer, boolean endGame) {
+    private static int locationValue(SquareDesc piece, int currentPlayer, boolean endGame) {
         int ycoord;
         if (currentPlayer == WHITE) {
-            ycoord = friendly ? piece.y : (7-piece.y);
+            ycoord = piece.y;
         }
         else {
-            ycoord = friendly ? (7-piece.y) : piece.y;
+            ycoord = (7-piece.y);
         }
         ycoord *= 8;
         if (piece.type == PAWN) {
@@ -106,7 +159,7 @@ public class Evaluator {
             return knightpos[loc];
         }
         else if (piece.type == BISHOP) {
-            int loc = ycoord + piece.x;
+            int loc = ycoord + piece.x ;
             return bishoppos[loc];
         }
         else if (piece.type == ROOK) {
@@ -132,14 +185,13 @@ public class Evaluator {
     private static int[] pieceValue = new int[7];
     static {
         pieceValue[PAWN]   = 10;
-        pieceValue[KNIGHT] = 30;
-        pieceValue[BISHOP] = 30;
+        pieceValue[KNIGHT] = 32;
+        pieceValue[BISHOP] = 33;
         pieceValue[ROOK]   = 50;
         pieceValue[QUEEN]  = 90;
-        pieceValue[KING]   = 35;
+        pieceValue[KING]   = 300;
         pieceValue[EMPTY]  = 0;
     }
-
 
 
     private static int bishoppos[] = {
@@ -186,15 +238,15 @@ public class Evaluator {
             -20,-10,-10, -5, -5,-10,-10,-20,
             -10,  0,  5,  0,  0,  0,  0,-10,
             -10,  5,  5,  5,  5,  5,  0,-10,
-              0,  0,  5,  5,  5,  5,  0, -5,
-             -5,  0,  5,  5,  5,  5,  0, -5,
+            0,  0,  5,  5,  5,  5,  0, -5,
+            -5,  0,  5,  5,  5,  5,  0, -5,
             -10,  0,  5,  5,  5,  5,  0,-10,
             -10,  0,  0,  0,  0,  0,  0,-10,
             -20,-10,-10, -5, -5,-10,-10,-20,};
 
     private static int kingposstart[] =   {
-             20, 30, 10,  0,  0, 20, 30, 20,
-             20, 20,  0,  0,  0,  0, 20, 20,
+            20, 30, 10,  0,  0, 20, 30, 20,
+            20, 20,  0,  0,  0,  0, 20, 20,
             -10,-20,-20,-20,-20,-20,-20,-10,
             -20,-30,-30,-40,-40,-30,-30,-20,
             -30,-40,-40,-50,-50,-40,-40,-30,

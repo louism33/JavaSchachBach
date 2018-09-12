@@ -99,7 +99,7 @@ public class IterativeDeepener {
             }
             return value;
         } else {
-            int value = Integer.MIN_VALUE;
+            int value = Integer.MAX_VALUE;
             List<Move> unrankedMoves = board.generateMoves();
             List<Move> moves = rankMoves(unrankedMoves, null);
             for (Move move : moves) {
