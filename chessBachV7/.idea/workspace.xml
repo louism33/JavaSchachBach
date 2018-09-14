@@ -2,210 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f6e096-5943-45a8-8f05-49930c946709" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV7.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessBachV8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/chessEngineVersionOne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/ChessTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV1/chess/Tree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/ChessTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/Graphics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/IterativeDeepener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/NegaMaxer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/chess/Tree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV2Beta/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/ChessTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/Graphics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/IterativeDeepener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/NegaMaxer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/chess/Tree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV3/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/ChessTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/Graphics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/IterativeDeepener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/chess/Tree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV5/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/Graphics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/IterativeDeepener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV6/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/Graphics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/IterativeDeepener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/MoveOrganiser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessBachV7/res/whiteRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/ChessBoard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/ChessTree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/Engine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/Evaluator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/ITree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/MasterList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/MasterScores.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/Move.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/StandAlone.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/Tree.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/out/production/chessEngineVersionOne/chess/TreeMaker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/ChessBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/Evaluator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/Graphics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/IterativeDeepener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/MoveOrganiser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/chess/StandAlone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackPawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/blackRook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/chess (copy).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/chess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/chessboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/pieces.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whiteBishop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whiteKing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whiteKnight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whitePawn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whiteQueen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chessBachV8/src/res/whiteRook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV7/chess/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Evaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV7/chess/Evaluator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/IterativeDeepener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV7/chess/IterativeDeepener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/MoveOrganiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV7/chess/MoveOrganiser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Evaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/MoveOrganiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/MoveOrganiser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -242,22 +40,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="12243" />
+          <entry key="java" value="12248" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12243" />
+          <entry key="JAVA" value="12248" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="418">
               <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
             </state>
           </provider>
@@ -272,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chess/Evaluator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="176" column="43" lean-forward="true" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
               <folding>
                 <element signature="method#eval#0;class#Evaluator#0" />
                 <element signature="method#allConsideredFactors#0;class#Evaluator#0" />
@@ -611,7 +409,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536959601551" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536959686520" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -702,12 +500,12 @@
       <workItem from="1536644348822" duration="3589000" />
       <workItem from="1536684075823" duration="10491000" />
       <workItem from="1536743195186" duration="25690000" />
-      <workItem from="1536918882034" duration="22546000" />
+      <workItem from="1536918882034" duration="22630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104050000" />
+    <option name="totallyTimeSpent" value="104134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
@@ -824,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -840,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/Evaluator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
+        <state relative-caret-position="225">
+          <caret line="176" column="43" lean-forward="true" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
           <folding>
             <element signature="method#eval#0;class#Evaluator#0" />
             <element signature="method#allConsideredFactors#0;class#Evaluator#0" />
@@ -860,6 +651,13 @@
             <element signature="method#locationValue#0;class#Evaluator#0" />
             <element signature="initializer##0;class#Evaluator#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
