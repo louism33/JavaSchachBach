@@ -16,7 +16,7 @@ public class Evaluator {
 
     static final int MATE = -1000000;
 
-    int eval(ChessBoard board) {
+    static int eval(ChessBoard board) {
         int boardScore;
         int myTurn = board.getTurn();
         int enemyTurn = 1 - myTurn;
@@ -40,7 +40,7 @@ public class Evaluator {
         return boardScore;
     }
 
-    private int allConsideredFactors (ChessBoard board, int turn){
+    private static int allConsideredFactors (ChessBoard board, int turn){
         int playersScore = materialAndPosition(board, turn)
 //                + bishopPairBonus(board, turn)
 //                + pawnStructureBonus(board, turn)
@@ -61,13 +61,13 @@ public class Evaluator {
     }
 
 
-    private void printDebug (ChessBoard board, int myTurn, int enemyTurn, int boardScore){
+    private static void printDebug (ChessBoard board, int myTurn, int enemyTurn, int boardScore){
         printStuff (board, myTurn, allConsideredFactors(board, myTurn));
         printStuff (board, enemyTurn, allConsideredFactors(board, enemyTurn));
         System.out.println("--- WiM: "+ weightedImbalanceModifier(board) + " -");
         System.out.println("----- Final Score: " + boardScore + " ---\n");
     }
-    private void printStuff(ChessBoard board, int turn, int playersScore){
+    private static void printStuff(ChessBoard board, int turn, int playersScore){
 
         System.out.println("- turn: "+turn);
         System.out.println("MaP: " + materialAndPosition(board, turn));
@@ -88,7 +88,7 @@ public class Evaluator {
         System.out.println("-");
     }
 
-    private int materialAndPosition(ChessBoard board, int turn) {
+    private static int materialAndPosition(ChessBoard board, int turn) {
         boolean endGame = isEndGame(board);
         int maxMyPieces = board.getPieces(turn).length;
         SquareDesc[] myPieces = board.getPieces(turn);
@@ -102,7 +102,7 @@ public class Evaluator {
         return score;
     }
 
-    private int rookOnOpenFileBonus (ChessBoard board, int turn){
+    private static int rookOnOpenFileBonus (ChessBoard board, int turn){
         int rookOnOpenFileBonus= 15;
         int finalBonus = 0;
         nextPiece:
@@ -120,18 +120,18 @@ public class Evaluator {
         return finalBonus;
     }
 
-    private int casteledBonus (ChessBoard board, int turn){
+    private static int casteledBonus (ChessBoard board, int turn){
         int casteledBonus = 30;
         return (board.hascastled[turn]) ? casteledBonus : 0;
     }
 
-    private int bishopPairBonus (ChessBoard board, int turn){
+    private static int bishopPairBonus (ChessBoard board, int turn){
         int bishopPairBonus = 25;
         int b = numberOfFriendlyBishops(board, turn);
         return (b == 0 | b == 1) ? 0 : bishopPairBonus;
     }
 
-    private int pawnStructureBonus (ChessBoard board, int turn){
+    private static int pawnStructureBonus (ChessBoard board, int turn){
         int pawnStructureBonus = 10;
         int finalBonus = 0;
         int dealingWithDirection = turn * 2 - 1; // white == 1, black == -1
@@ -154,7 +154,7 @@ public class Evaluator {
         return finalBonus;
     }
 
-    private int outpostBonus (ChessBoard board, int turn){
+    private static int outpostBonus (ChessBoard board, int turn){
         int outpostBonus = 20;
         int finalBonus = 0;
         int dealingWithDirection = turn * 2 - 1; // white == 1, black == -1
@@ -177,7 +177,7 @@ public class Evaluator {
         return finalBonus;
     }
 
-    private int weightedImbalanceModifier(ChessBoard board){
+    private static int weightedImbalanceModifier(ChessBoard board){
         // create incentive for trades when ahead, penalise them when behind
         // (by approx 5 points in realistic midgame)
         int weightImbalanceModifier = 75;
@@ -188,7 +188,7 @@ public class Evaluator {
         return finalModifier;
     }
 
-    private int doublePawnPenalty (ChessBoard board, int turn) {
+    private static int doublePawnPenalty (ChessBoard board, int turn) {
         int doubledPawnPenalty = -10;
         int finalPenalty = 0;
         for (SquareDesc piece : board.getPieces(turn)){
@@ -211,7 +211,7 @@ public class Evaluator {
         return finalPenalty;
     }
 
-    private int singleBishopColorPenalty(ChessBoard board, int turn) {
+    private static int singleBishopColorPenalty(ChessBoard board, int turn) {
         int pawnOnMyColorPenalty = -5;
         int finalPenalty = pawnOnMyColorPenalty * (-2); // penalty starts at three pawns on my colour
         if (numberOfFriendlyBishops(board, turn) == 1) {
@@ -231,11 +231,11 @@ public class Evaluator {
         return 0;
     }
 
-    private int inCheckPenalty (ChessBoard board){
+    private static int inCheckPenalty (ChessBoard board){
         return board.inCheck() ? -2 : 0;
     }
 
-    private int numberOfFriendlyBishops (ChessBoard board, int turn){
+    private static int numberOfFriendlyBishops (ChessBoard board, int turn){
         int b = 0;
         for (SquareDesc piece : board.getPieces(turn)){
             if (piece.type == BISHOP) b++;
@@ -244,15 +244,15 @@ public class Evaluator {
         return b;
     }
 
-    private int totalPieces(ChessBoard board){
+    private static int totalPieces(ChessBoard board){
         return (board.getPieces(board.getTurn()).length + board.getPieces(1-board.getTurn()).length);
     }
 
-    private boolean isEndGame(ChessBoard board) {
+    private static boolean isEndGame(ChessBoard board) {
         return totalPieces(board) < 8;
     }
 
-    private boolean isStalemate (ChessBoard b) {
+    private static boolean isStalemate (ChessBoard b) {
         Move[] moveArray;
         moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
         if (moveArray.length == 0 && !b.inCheck()) {
@@ -261,7 +261,7 @@ public class Evaluator {
         return false;
     }
 
-    private boolean isInMate (ChessBoard b){
+    private static boolean isInMate (ChessBoard b){
         Move[] moveArray;
         moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
         if (moveArray.length == 0 && b.inCheck()) {
