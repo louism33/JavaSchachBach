@@ -32,7 +32,7 @@ public class Engine {
     private int allocateTime(int timeleft, int optime) {
         double t = increment + timeleft/30.0;
         if (t > timeleft) t = .9*timeleft;
-        t = 20000;
+        t = 100;
         return (int) t;
     }
 

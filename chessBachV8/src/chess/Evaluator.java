@@ -26,27 +26,66 @@ public class Evaluator {
         if (isStalemate(board)) {
             return 0;
         }
-        boardScore = allConsideredFactors(board, myTurn) -
-                allConsideredFactors(board, enemyTurn);
+        boardScore = allConsideredFactors(board, myTurn)
+                - allConsideredFactors(board, enemyTurn)
+                + weightedImbalanceModifier(board)
+                ;
+
+        boolean debugPrinting = true;
+        if (!debugPrinting){
+            printDebug (board, myTurn, enemyTurn, boardScore);
+        }
+
+
         return boardScore;
     }
 
     private int allConsideredFactors (ChessBoard board, int turn){
         int playersScore = materialAndPosition(board, turn)
-                + bishopPairBonus(board, turn)
-                + pawnStructureBonus(board, turn)
-                + casteledBonus(board, turn)
-                + outpostBonus(board, turn)
-                + rookOnOpenFileBonus (board, turn)
+//                + bishopPairBonus(board, turn)
+//                + pawnStructureBonus(board, turn)
+//                + casteledBonus(board, turn)
+//                + outpostBonus(board, turn)
+//                + rookOnOpenFileBonus (board, turn)
+//
+//                + inCheckPenalty(board)
+//                + doublePawnPenalty(board, turn)
+//                + singleBishopColorPenalty (board, turn)
+//
 
-                + inCheckPenalty(board)
-                + doublePawnPenalty(board, turn)
-                + singleBishopColorPenalty (board, turn)
-
-                + weightedImbalanceModifier(board)
                 ;
 
+
+
         return playersScore;
+    }
+
+
+    private void printDebug (ChessBoard board, int myTurn, int enemyTurn, int boardScore){
+        printStuff (board, myTurn, allConsideredFactors(board, myTurn));
+        printStuff (board, enemyTurn, allConsideredFactors(board, enemyTurn));
+        System.out.println("--- WiM: "+ weightedImbalanceModifier(board) + " -");
+        System.out.println("----- Final Score: " + boardScore + " ---\n");
+    }
+    private void printStuff(ChessBoard board, int turn, int playersScore){
+
+        System.out.println("- turn: "+turn);
+        System.out.println("MaP: " + materialAndPosition(board, turn));
+        System.out.println("---");
+        System.out.println("BpB: " +bishopPairBonus(board, turn));
+
+        System.out.println("PsB: " +pawnStructureBonus(board, turn));
+        System.out.println("CaB: "+casteledBonus(board, turn));
+        System.out.println("OpB: "+outpostBonus(board, turn));
+        System.out.println("RoF: " +rookOnOpenFileBonus (board, turn));
+        System.out.println("---");
+        System.out.println("IcP: "+inCheckPenalty(board));
+        System.out.println("DpP: "+doublePawnPenalty(board, turn));
+        System.out.println("BcP: " +singleBishopColorPenalty (board, turn));
+        System.out.println("---");
+
+        System.out.println("finalPlayerScore = " + playersScore);
+        System.out.println("-");
     }
 
     private int materialAndPosition(ChessBoard board, int turn) {
@@ -71,7 +110,7 @@ public class Evaluator {
             if (piece.type == ROOK) {
                 for (int y = 1; y < 7; y++) {
                     SquareDesc potentialBlocker = board.getSquare(piece.x, y);
-                    if (potentialBlocker.type == PAWN && potentialBlocker.color == board.getTurn()){
+                    if (potentialBlocker.type == PAWN && potentialBlocker.color == turn){
                         continue nextPiece;
                     }
                 }
@@ -100,13 +139,13 @@ public class Evaluator {
             if (piece.type == PAWN) {
                 if (piece.x - 1 >= 0){
                     SquareDesc potentialPawnAlly = board.getSquare(piece.x - 1,  piece.y - dealingWithDirection);
-                    if (potentialPawnAlly.type == PAWN && potentialPawnAlly.color == board.getTurn()){
+                    if (potentialPawnAlly.type == PAWN && potentialPawnAlly.color == turn){
                         finalBonus += pawnStructureBonus;
                     }
                 }
                 if (piece.x + 1 <= 7){
                     SquareDesc potentialPawnAlly = board.getSquare(piece.x + 1,  piece.y - dealingWithDirection);
-                    if (potentialPawnAlly.type == PAWN && potentialPawnAlly.color == board.getTurn()){
+                    if (potentialPawnAlly.type == PAWN && potentialPawnAlly.color == turn){
                         finalBonus += pawnStructureBonus;
                     }
                 }
@@ -123,13 +162,13 @@ public class Evaluator {
             if (piece.type == PAWN && piece.y != 1 && piece.y != 6) {
                 if (piece.x - 1 >= 0){
                     SquareDesc potentialAlly = board.getSquare(piece.x - 1,  piece.y + dealingWithDirection);
-                    if ((potentialAlly.type == BISHOP || potentialAlly.type == KNIGHT) && potentialAlly.color == board.getTurn()){
+                    if ((potentialAlly.type == BISHOP || potentialAlly.type == KNIGHT) && potentialAlly.color == turn){
                         finalBonus += outpostBonus;
                     }
                 }
                 if (piece.x + 1 <= 7){
                     SquareDesc potentialAlly = board.getSquare(piece.x + 1,  piece.y + dealingWithDirection);
-                    if ((potentialAlly.type == BISHOP || potentialAlly.type == KNIGHT) && potentialAlly.color == board.getTurn()){
+                    if ((potentialAlly.type == BISHOP || potentialAlly.type == KNIGHT) && potentialAlly.color == turn){
                         finalBonus += outpostBonus;
                     }
                 }
@@ -145,7 +184,7 @@ public class Evaluator {
         int myTotalPieces = board.getPieces(board.getTurn()).length;
         int yourTotalPieces = board.getPieces(1 - board.getTurn()).length;
         float ratio = ((float) myTotalPieces) / ((float) yourTotalPieces);
-        int finalModifier = (int) ratio * weightImbalanceModifier - weightImbalanceModifier;
+        int finalModifier = (int) (ratio * weightImbalanceModifier - weightImbalanceModifier);
         return finalModifier;
     }
 
@@ -156,8 +195,13 @@ public class Evaluator {
             if (piece.type == PAWN) {
                 int y = 6;
                 while (y > 0){
+                    if (y == piece.y) {
+                        y--;
+                        continue;
+                    }
                     SquareDesc potentialDoublePawn = board.getSquare(piece.x,  y);
-                    if (potentialDoublePawn.type == PAWN && potentialDoublePawn.color == board.getTurn()){
+                    if (potentialDoublePawn.type == PAWN &&
+                            potentialDoublePawn.color == turn){
                         finalPenalty += doubledPawnPenalty;
                     }
                     y--;
