@@ -3,54 +3,84 @@ package chess;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuiescenceSearch {
+class QuiescenceSearch {
+
+    private static int numberOfRegularEvals = 0;
+    private static int numberOfQuiescentEvals = 0;
+    private static int QCounter = 0;
+
+    static int getNumberOfRegularEvals() {
+        return numberOfRegularEvals;
+    }
+
+    static int getNumberOfQuiescentEvals() {
+        return numberOfQuiescentEvals;
+    }
+
+    public static int getQCounter() {
+        return QCounter;
+    }
 
     static int quiescentSearchOrganiser (ChessBoard board, int originalPlayer,
                                          int alpha, int beta,
                                          long startTime, long timeLimitMillis) {
 
-        return quietNode(board)
-                ? Evaluator.eval(board)
-                : quiescentSearch(board, originalPlayer, alpha, beta, startTime, timeLimitMillis);
+        if (quietNode(board)) {
+            numberOfRegularEvals++;
+            return Evaluator.eval(board);
+        } else {
+            return quiescentSearch(board, originalPlayer, alpha, beta, startTime, timeLimitMillis);
+        }
     }
 
-    private static int quiescentSearch(ChessBoard board, int originalPlayer, int alpha, int beta,
-                                long startTime, long timeLimitMillis){
 
+    private static int quiescentSearch(ChessBoard board, int originalPlayer, int alpha, int beta,
+                                       long startTime, long timeLimitMillis){
 
         int score = Evaluator.eval(board);
+        numberOfQuiescentEvals++;
 
-        if (score >= beta) return beta;
-        if (score > alpha) {
+        if (score >= beta) {
+            return beta;
+        }
+
+        if (alpha < score) {
             alpha = score;
         }
 
         List<Move> allDangerousMoves = allCaptureMoves(board);
         allDangerousMoves.addAll(allCheckMoves(board));
-        int totalDangerousMoves = allDangerousMoves.size();
 
-//        System.out.println("DangerousMoves: "+ allDangerousMoves +" player: " + board.getTurn());
+        List<Move> allOrderedDangerousMoves = MoveOrganiser.organiseMovesForQuiescent(board, allDangerousMoves);
+
+        int totalDangerousMoves = allOrderedDangerousMoves.size();
+
+        boolean timeUp = false;
+
         for (int m = 0; m < totalDangerousMoves; m++) {
 
-            long currentTime = System.currentTimeMillis();
-            long timeLeft = startTime + timeLimitMillis - currentTime;
-            if (timeLeft < 0) {
-                break;
-            }
+            if (!timeUp){
+                QCounter++;
 
+                Move move = allOrderedDangerousMoves.get(m);
 
-            Move move = allDangerousMoves.get(m);
+                ChessBoard childBoard = new ChessBoard(board);
+                childBoard.makeMove(move);
 
-            ChessBoard childBoard = new ChessBoard(board);
-            childBoard.makeMove(move);
+                int value = -quiescentSearch(childBoard, 1 - originalPlayer,
+                        -beta, -alpha, startTime, timeLimitMillis);
 
+                if (value >= beta) return beta;
+                if (value > alpha) {
+                    alpha = value;
+                }
 
-            int value = -quiescentSearch(childBoard, 1 - originalPlayer,
-                    -beta, -alpha, startTime, timeLimitMillis);
+                long currentTime = System.currentTimeMillis();
+                long timeLeft = startTime + timeLimitMillis - currentTime;
+                if (timeLeft < 0) {
+                    timeUp = true;
+                }
 
-            if (value >= beta) return beta;
-            if (value > alpha) {
-                alpha = value;
             }
         }
         return alpha;

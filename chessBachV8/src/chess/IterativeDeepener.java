@@ -4,12 +4,11 @@ import java.util.List;
 
 public class IterativeDeepener {
 
-    private int maxDepthReached;
-    private Move dfsWinningMove, enemyKillerMove;
+    private static int maxDepthReached;
+    private static Move dfsWinningMove, enemyKillerMove;
 
-    private final int MATE = Evaluator.MATE;
+    private static final int MATE = Evaluator.MATE;
 
-    // TODO: (Null Move) Pruning
 
     public static void main (String[] args){
         IterativeDeepener i = new IterativeDeepener();
@@ -19,21 +18,32 @@ public class IterativeDeepener {
         ChessBoard board = new ChessBoard();
         long st = System.currentTimeMillis();
 
-        Move m = expandBoard(board, st, 100);
-        System.out.println(m);
+        Move m = expandBoard(board, st, 1000);
+
+        long et = System.currentTimeMillis();
+        System.out.println("Move we will play: " + m);
+        System.out.println("The whole process took: " + (et - st) + " millis. "+((et-st)/1000)+ " seconds.");
+        System.out.println("Number of normal evals: "+QuiescenceSearch.getNumberOfRegularEvals());
+        System.out.println("Number of quiescent evals: "+QuiescenceSearch.getNumberOfQuiescentEvals());
+
+        System.out.println("That is " + (1000 *
+                (QuiescenceSearch.getNumberOfRegularEvals() +
+                        QuiescenceSearch.getNumberOfQuiescentEvals()) / (et-st))
+                + " calls per second.");
     }
 
-    Move expandBoard(ChessBoard board, long startTime, long timeLimitMillis){
+    static Move expandBoard(ChessBoard board, long startTime, long timeLimitMillis){
         dfsWinningMove = ((List<Move>) board.generateMoves()).get(0);
-        enemyKillerMove = new Move();
+
+        PrincipleVariationSearch.setDfsWinningMove(dfsWinningMove);
+        PrincipleVariationSearch.setEnemyKillerMove(new Move());
+
         Move bestMove = iterativeDeepeningSearchBoard(board, startTime, timeLimitMillis);
         return bestMove;
     }
 
 
-
-
-    private Move iterativeDeepeningSearchBoard(ChessBoard board, long startTime,
+    private static Move iterativeDeepeningSearchBoard(ChessBoard board, long startTime,
                                                long timeLimitMillis) {
         Move bestMove = new Move();
         boolean timeUp = false;
@@ -76,7 +86,7 @@ public class IterativeDeepener {
         return bestMove;
     }
 
-    int getMaxDepthReached() {
+    static int getMaxDepthReached() {
         return maxDepthReached;
     }
 }

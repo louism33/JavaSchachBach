@@ -1,6 +1,8 @@
 package chess;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MoveOrganiser {
@@ -17,6 +19,38 @@ public class MoveOrganiser {
             moves = rankMoves(unrankedMoves, null);
         }
         return moves;
+    }
+
+    static List<Move> organiseMovesForQuiescent(ChessBoard board, List<Move> unrankedMoves){
+        if (unrankedMoves.size() < 2) return unrankedMoves;
+        Collections.sort(unrankedMoves,
+                ((Move a, Move b) -> qScore(board, b) - qScore(board, a))
+                );
+        return unrankedMoves;
+    }
+
+    private static int qScore (ChessBoard board, Move move){
+        ChessBoard.SquareDesc takingPiece =
+                board.getSquare(move.srcx, move.srcy);
+        ChessBoard.SquareDesc victimPiece =
+                board.getSquare(move.destx, move.desty);
+
+        if (victimPiece.type == 6) {
+            return 0; // checking moves placed in middle
+        }
+
+        return qScoreHelper(victimPiece) - qScoreHelper(takingPiece);
+    }
+
+    private static int qScoreHelper(ChessBoard.SquareDesc piece){
+        switch (piece.type) {
+            case 5 : return 1;
+            case 0 : return 3;
+            case 1 : return 3;
+            case 2 : return 5;
+            case 3 : return 9;
+            default: return 0;
+        }
     }
 
 
@@ -67,6 +101,9 @@ public class MoveOrganiser {
         rankedMoves.addAll(temp2);
         rankedMoves.addAll(temp1);
         rankedMoves.addAll(temp);
+
+        assert moves.size() == rankedMoves.size();
+
         return rankedMoves;
     }
 }

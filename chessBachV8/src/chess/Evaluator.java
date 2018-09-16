@@ -42,16 +42,15 @@ public class Evaluator {
 
     private static int allConsideredFactors (ChessBoard board, int turn){
         int playersScore = materialAndPosition(board, turn)
-//                + bishopPairBonus(board, turn)
-//                + pawnStructureBonus(board, turn)
-//                + casteledBonus(board, turn)
-//                + outpostBonus(board, turn)
-//                + rookOnOpenFileBonus (board, turn)
-//
-//                + inCheckPenalty(board)
-//                + doublePawnPenalty(board, turn)
-//                + singleBishopColorPenalty (board, turn)
-//
+                + bishopPairBonus(board, turn)
+                + pawnStructureBonus(board, turn)
+                + casteledBonus(board, turn)
+                + outpostBonus(board, turn)
+                + rookOnOpenFileBonus (board, turn)
+
+                + inCheckPenalty(board)
+                + doublePawnPenalty(board, turn)
+                + singleBishopColorPenalty (board, turn)
 
                 ;
 
@@ -391,5 +390,7 @@ public class Evaluator {
             -30,-10, 20, 30, 30, 20,-10,-30,
             -30,-20,-10,  0,  0,-10,-20,-30,
             -50,-40,-30,-20,-20,-30,-40,-50};
+
+
 
 }
