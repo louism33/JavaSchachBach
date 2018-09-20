@@ -1,5 +1,7 @@
 package chess;
 
+import com.sun.org.apache.xml.internal.dtm.ref.dom2dtm.DOM2DTM;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -73,21 +75,19 @@ public class ChessGraphics {
                 int numberOfBoards = pastBoards.size();
                 if (numberOfBoards > 0){
                     ChessBoard oldBoard = pastBoards.get(numberOfBoards - 1);
-                    pastBoards.remove(numberOfBoards - 1);
-
-                    System.out.println(board.turn);
-
                     futureBoards.add(board);
+                    oldBoard.turn = 1 - board.turn;
                     setBoard(oldBoard);
-                    System.out.println(board.turn);
+                    updateCBS(board);
+                    pastBoards.remove(numberOfBoards - 1);
+                    possibleMove = new PossibleMove(board);
+
                 } else {
                     System.out.println("No past boards.");
                 }
             }
         });
         tools.add(prevBoard);
-
-
 
         JButton nextBoard = new JButton("Next Board");
         nextBoard.addActionListener(new ActionListener() {
@@ -96,12 +96,12 @@ public class ChessGraphics {
                 int numberOfBoards = futureBoards.size();
                 if (numberOfBoards > 0){
                     ChessBoard futureBoard = futureBoards.get(numberOfBoards - 1);
-                    futureBoards.remove(numberOfBoards - 1);
-
-                    System.out.println(futureBoards);
-
                     pastBoards.add(board);
+                    futureBoard.turn = 1 - board.turn;
                     setBoard(futureBoard);
+                    updateCBS(board);
+                    futureBoards.remove(numberOfBoards - 1);
+                    possibleMove = new PossibleMove(board);
                 }
                 else {
                     System.out.println("No next boards.");
@@ -139,43 +139,12 @@ public class ChessGraphics {
         tools.addSeparator();
         tools.add(message);
 
-
-
-
         gui.add(new JLabel("?"), BorderLayout.LINE_START);
         chessBoard = new JPanel(new GridLayout(0, 9));
         chessBoard.setBorder(new LineBorder(Color.BLACK));
         gui.add(chessBoard);
-        Insets buttonMargin = new Insets(0,0,0,0);
-        for (int ii = 0; ii < chessBoardSquares.length; ii++) {
-            for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
-                JButton b = new JButton();
-                b.setMargin(buttonMargin);
 
-                ChessBoard.SquareDesc sq = board.getSquare((jj), (7-ii));
-
-                ImageIcon imageIcon = gim.iconFinder(sq);
-
-                b.setIcon(imageIcon);
-                if ((jj + ii) % 2 == 0) {
-                    b.setBackground(white);
-                } else {
-                    b.setBackground(black);
-                }
-
-                int x = jj;
-                int y = 7-ii;
-                b.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent actionEvent) {
-                        ChessBoard.SquareDesc sq = board.getSquare((x), (y));
-                        translateMove(sq);
-                    }
-                });
-                chessBoardSquares[jj][ii] = b;
-
-            }
-        }
+        initCBS(board);
 
         chessBoard.add(new JLabel(""));
         for (int ii = 0; ii < 8; ii++) {
@@ -196,6 +165,48 @@ public class ChessGraphics {
         }
     }
 
+    void updateCBS(ChessBoard board){
+        Insets buttonMargin = new Insets(0,0,0,0);
+        for (int ii = 0; ii < chessBoardSquares.length; ii++) {
+            for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
+                ChessBoard.SquareDesc sq = this.board.getSquare((jj), (7-ii));
+                ImageIcon imageIcon = gim.iconFinder(sq);
+                chessBoardSquares[jj][ii].setIcon(imageIcon);
+            }
+        }
+    }
+
+    void initCBS(ChessBoard board){
+        Insets buttonMargin = new Insets(0,0,0,0);
+        for (int ii = 0; ii < chessBoardSquares.length; ii++) {
+            for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
+                JButton b = new JButton();
+                b.setMargin(buttonMargin);
+
+                ChessBoard.SquareDesc sq = this.board.getSquare((jj), (7-ii));
+
+                ImageIcon imageIcon = gim.iconFinder(sq);
+
+                b.setIcon(imageIcon);
+                if ((jj + ii) % 2 == 0) {
+                    b.setBackground(white);
+                } else {
+                    b.setBackground(black);
+                }
+
+                int x = jj;
+                int y = 7-ii;
+                b.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        ChessBoard.SquareDesc sq = board.getSquare((x), (y));
+                        translateMove(sq);
+                    }
+                });
+                chessBoardSquares[jj][ii] = b;
+            }
+        }
+    }
 
     PossibleMove possibleMove;
 
