@@ -2,181 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6e0805b-9291-41ec-b61e-23e440a95989" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chess/ChessGraphics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chess/StandAloneGraphics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chess/GraphicsImageManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/ChessTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV1/chess/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/ChessTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/IterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/NegaMaxer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/chess/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV2Beta/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/ChessTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/IterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/NegaMaxer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/chess/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV3/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/ChessTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/IterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/chess/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV5/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/IterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV6/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/IterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/MoveOrganiser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV7/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/AspirationSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/AspirationSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/Graphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/IterativeDeepener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/IterativeDeepener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/MoveOrganiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/MoveOrganiser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/PrincipleVariationSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/PrincipleVariationSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/StandAlone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/StandAlone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/ChessTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/ITree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/MasterList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/MasterScores.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessEngineVersionOne/chess/TreeMaker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/AspirationSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/AspirationSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Graphics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/IterativeDeepener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/MoveOrganiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/MoveOrganiser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/PrincipleVariationSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/PrincipleVariationSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/StandAlone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/StandAlone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$PossibleMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics$PossibleMove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessGraphics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chess/ChessGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chess/ChessGraphics.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -189,40 +24,40 @@
     <session id="-1662827035">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="51" />
+          <entry key="java" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="51" />
+          <entry key="JAVA" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16880" />
+          <entry key="java" value="17899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16880" />
+          <entry key="JAVA" value="17899" />
         </counts>
       </usages-collector>
     </session>
@@ -250,32 +85,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chess/ChessGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+            <state relative-caret-position="189">
+              <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2747#2748#0" expanded="true" />
-                <element signature="e#2810#2811#0" expanded="true" />
-                <element signature="e#4997#4998#0" expanded="true" />
-                <element signature="e#5043#5044#0" expanded="true" />
-                <element signature="e#10868#10869#0" expanded="true" />
-                <element signature="e#10901#10902#0" expanded="true" />
-                <element signature="e#10941#10942#0" expanded="true" />
-                <element signature="e#10967#10968#0" expanded="true" />
-                <element signature="e#11003#11004#0" expanded="true" />
-                <element signature="e#11031#11032#0" expanded="true" />
-                <element signature="e#11077#11078#0" expanded="true" />
-                <element signature="e#11111#11112#0" expanded="true" />
+                <element signature="e#6302#6303#0" expanded="true" />
+                <element signature="e#6348#6349#0" expanded="true" />
+                <element signature="e#5952#5953#0" expanded="true" />
+                <element signature="e#5994#5995#0" expanded="true" />
+                <element signature="e#7524#7525#0" expanded="true" />
+                <element signature="e#7568#7569#0" expanded="true" />
+                <element signature="e#13634#13635#0" expanded="true" />
+                <element signature="e#13667#13668#0" expanded="true" />
+                <element signature="e#13707#13708#0" expanded="true" />
+                <element signature="e#13733#13734#0" expanded="true" />
+                <element signature="e#13769#13770#0" expanded="true" />
+                <element signature="e#13797#13798#0" expanded="true" />
+                <element signature="e#13843#13844#0" expanded="true" />
+                <element signature="e#13877#13878#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chess/Move.java">
+        <entry file="file://$PROJECT_DIR$/src/chess/GraphicsImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="295">
+              <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4039#4040#0" expanded="true" />
+                <element signature="e#4070#4071#0" expanded="true" />
+                <element signature="e#4098#4099#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -283,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chess/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="6735">
               <caret line="459" column="37" selection-start-line="459" selection-start-column="29" selection-end-line="459" selection-end-column="37" />
             </state>
           </provider>
@@ -313,20 +156,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>princip</find>
-      <find>dfsWin</find>
-      <find>Square</find>
-      <find>allDangerousMoves</find>
-      <find>PAWN</find>
-      <find>out of wi</find>
-      <find>out of win</find>
       <find>out</find>
       <find>out of</find>
       <find>out of w</find>
       <find>millis</find>
       <find>dfsWinningMove</find>
       <find>xyfactor</find>
-      <find>make</find>
       <find>makemove</find>
       <find>rook</find>
       <find>whiteRook</find>
@@ -343,15 +178,27 @@
       <find>getsq</find>
       <find>aimo</find>
       <find>castling</find>
+      <find>KING</find>
+      <find>make</find>
+      <find>boardList</find>
+      <find>BLACKK</find>
+      <find>load</find>
+      <find>makeM</find>
+      <find>nextBoards</find>
+      <find>no nex</find>
     </findStrings>
     <replaceStrings>
       <replace>evaluator</replace>
       <replace>Evaluator</replace>
       <replace>allOrderedDangerousMoves</replace>
+      <replace>futureBoards</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/chess/ChessGraphics.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -370,6 +217,7 @@
         <option value="$PROJECT_DIR$/src/chess/Graphics.java" />
         <option value="$PROJECT_DIR$/src/chess/StandAlone.java" />
         <option value="$PROJECT_DIR$/src/chess/StandAloneGraphics.java" />
+        <option value="$PROJECT_DIR$/src/chess/GraphicsImageManager.java" />
         <option value="$PROJECT_DIR$/src/chess/ChessGraphics.java" />
       </list>
     </option>
@@ -386,7 +234,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
     <option name="width" value="846" />
     <option name="height" value="741" />
@@ -558,15 +406,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537391069074" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537471955712" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -685,18 +533,19 @@
       <workItem from="1537291317220" duration="9438000" />
       <workItem from="1537335293754" duration="3985000" />
       <workItem from="1537375095132" duration="12934000" />
-      <workItem from="1537421686286" duration="3637000" />
+      <workItem from="1537421686286" duration="3734000" />
+      <workItem from="1537461563819" duration="6533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110263000" />
+    <option name="totallyTimeSpent" value="116893000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="846" height="741" extended-state="4" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32456142" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24469697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -706,8 +555,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32847896" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.13592233" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41100323" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.27508092" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41100323" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -772,10 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,6 +677,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/chess/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chess/ChessBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6735">
+          <caret line="459" column="37" selection-start-line="459" selection-start-column="29" selection-end-line="459" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -843,38 +702,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chess/Move.java">
+    <entry file="file://$PROJECT_DIR$/src/chess/GraphicsImageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chess/ChessBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="459" column="37" selection-start-line="459" selection-start-column="29" selection-end-line="459" selection-end-column="37" />
+        <state relative-caret-position="295">
+          <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4039#4040#0" expanded="true" />
+            <element signature="e#4070#4071#0" expanded="true" />
+            <element signature="e#4098#4099#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chess/ChessGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="302" lean-forward="true" selection-start-line="302" selection-end-line="302" />
+        <state relative-caret-position="189">
+          <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2747#2748#0" expanded="true" />
-            <element signature="e#2810#2811#0" expanded="true" />
-            <element signature="e#4997#4998#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#10868#10869#0" expanded="true" />
-            <element signature="e#10901#10902#0" expanded="true" />
-            <element signature="e#10941#10942#0" expanded="true" />
-            <element signature="e#10967#10968#0" expanded="true" />
-            <element signature="e#11003#11004#0" expanded="true" />
-            <element signature="e#11031#11032#0" expanded="true" />
-            <element signature="e#11077#11078#0" expanded="true" />
-            <element signature="e#11111#11112#0" expanded="true" />
+            <element signature="e#6302#6303#0" expanded="true" />
+            <element signature="e#6348#6349#0" expanded="true" />
+            <element signature="e#5952#5953#0" expanded="true" />
+            <element signature="e#5994#5995#0" expanded="true" />
+            <element signature="e#7524#7525#0" expanded="true" />
+            <element signature="e#7568#7569#0" expanded="true" />
+            <element signature="e#13634#13635#0" expanded="true" />
+            <element signature="e#13667#13668#0" expanded="true" />
+            <element signature="e#13707#13708#0" expanded="true" />
+            <element signature="e#13733#13734#0" expanded="true" />
+            <element signature="e#13769#13770#0" expanded="true" />
+            <element signature="e#13797#13798#0" expanded="true" />
+            <element signature="e#13843#13844#0" expanded="true" />
+            <element signature="e#13877#13878#0" expanded="true" />
           </folding>
         </state>
       </provider>
