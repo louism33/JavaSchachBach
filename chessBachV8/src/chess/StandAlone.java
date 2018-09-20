@@ -54,7 +54,7 @@ public class StandAlone {
 
         Engine player = new Engine();
 
-        Graphics graphics = new Graphics();
+//        Graphics graphics = new Graphics();
 
         System.out.println("Computer player: "+player.getName());
 
@@ -65,7 +65,7 @@ public class StandAlone {
 
             while (true) {
                 b = player.getBoard();
-                graphics.setBoard(b);
+//                graphics.setBoard(b);
 
 
                 if (b.getTurn() == ChessBoard.WHITE) prompt = "White"; else prompt = "Black";

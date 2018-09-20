@@ -36,6 +36,7 @@ public class Engine {
         return (int) t;
     }
 
+
     public Move computeMove(int timeleft, int optime) {
         startTime = System.currentTimeMillis();
         allocated = allocateTime(timeleft, optime);

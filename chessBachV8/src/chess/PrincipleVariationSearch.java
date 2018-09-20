@@ -81,12 +81,4 @@ class PrincipleVariationSearch {
     static Move getEnemyKillerMove() {
         return enemyKillerMove;
     }
-
-    static void setDfsWinningMove(Move dfsWinningMove) {
-        PrincipleVariationSearch.dfsWinningMove = dfsWinningMove;
-    }
-
-    static void setEnemyKillerMove(Move enemyKillerMove) {
-        PrincipleVariationSearch.enemyKillerMove = enemyKillerMove;
-    }
 }

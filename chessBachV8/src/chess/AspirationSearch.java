@@ -5,12 +5,10 @@ public class AspirationSearch {
     private static final int MATE = Evaluator.MATE;
     private static Move dfsWinningMove = new Move(), enemyKillerMove = new Move();
 
-
-
     static int aspirationSearch(ChessBoard board, int depthToSearchTo, int aspirationScore,
                                  long startTime, long timeLimitMillis){
 
-        int firstWindow = 50, windowDelta = firstWindow * 2;
+        int firstWindow = 100, windowDelta = firstWindow;
         int alpha, beta;
         int score = 0;
         boolean timeUp = false;

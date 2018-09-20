@@ -10,34 +10,29 @@ public class IterativeDeepener {
     private static final int MATE = Evaluator.MATE;
 
 
-    public static void main (String[] args){
-        IterativeDeepener i = new IterativeDeepener();
-    }
-
-    IterativeDeepener(){
-        ChessBoard board = new ChessBoard();
-        long st = System.currentTimeMillis();
-
-        Move m = expandBoard(board, st, 1000);
-
-        long et = System.currentTimeMillis();
-        System.out.println("Move we will play: " + m);
-        System.out.println("The whole process took: " + (et - st) + " millis. "+((et-st)/1000)+ " seconds.");
-        System.out.println("Number of normal evals: "+QuiescenceSearch.getNumberOfRegularEvals());
-        System.out.println("Number of quiescent evals: "+QuiescenceSearch.getNumberOfQuiescentEvals());
-
-        System.out.println("That is " + (1000 *
-                (QuiescenceSearch.getNumberOfRegularEvals() +
-                        QuiescenceSearch.getNumberOfQuiescentEvals()) / (et-st))
-                + " calls per second.");
-    }
+//    public static void main (String[] args){
+//        IterativeDeepener i = new IterativeDeepener();
+//    }
+//
+//    IterativeDeepener(){
+//        ChessBoard board = new ChessBoard();
+//        long st = System.currentTimeMillis();
+//
+//        Move m = expandBoard(board, st, 1000000);
+//
+//        long et = System.currentTimeMillis();
+//        System.out.println("Move we will play: " + m);
+//        System.out.println("The whole process took: " + (et - st) + " millis. "+((et-st)/1000)+ " seconds.");
+//        System.out.println("Number of normal evals: "+QuiescenceSearch.getNumberOfRegularEvals());
+//        System.out.println("Number of quiescent evals: "+QuiescenceSearch.getNumberOfQuiescentEvals());
+//
+//        System.out.println("That is " + (1000 *
+//                (QuiescenceSearch.getNumberOfRegularEvals() +
+//                        QuiescenceSearch.getNumberOfQuiescentEvals()) / (et-st))
+//                + " calls per second.");
+//    }
 
     static Move expandBoard(ChessBoard board, long startTime, long timeLimitMillis){
-        dfsWinningMove = ((List<Move>) board.generateMoves()).get(0);
-
-        PrincipleVariationSearch.setDfsWinningMove(dfsWinningMove);
-        PrincipleVariationSearch.setEnemyKillerMove(new Move());
-
         Move bestMove = iterativeDeepeningSearchBoard(board, startTime, timeLimitMillis);
         return bestMove;
     }
@@ -49,7 +44,7 @@ public class IterativeDeepener {
         boolean timeUp = false;
         int depthToSearchTo = 1;
         int score, previousScore = 0;
-        while (!timeUp) {
+        while (!timeUp && depthToSearchTo <= 7) {
 
             score = AspirationSearch.aspirationSearch(board, depthToSearchTo, previousScore,
                     startTime, timeLimitMillis);
@@ -60,7 +55,6 @@ public class IterativeDeepener {
             enemyKillerMove = AspirationSearch.getEnemyKillerMove();
 
             bestMove.copyMove(dfsWinningMove);
-
 
             boolean debug = true;
             if (debug) {
