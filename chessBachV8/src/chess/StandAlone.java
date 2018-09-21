@@ -54,7 +54,7 @@ public class StandAlone {
 
         Engine player = new Engine();
 
-//        Graphics graphics = new Graphics();
+        StandAloneSimpleGraphics graphics = new StandAloneSimpleGraphics();
 
         System.out.println("Computer player: "+player.getName());
 
@@ -62,11 +62,9 @@ public class StandAlone {
             player.newGame(5*60*1000, 0);  // time control of 5 0, not that it
             // matters much
 
-
             while (true) {
                 b = player.getBoard();
-//                graphics.setBoard(b);
-
+                graphics.setBoard(b);
 
                 if (b.getTurn() == ChessBoard.WHITE) prompt = "White"; else prompt = "Black";
                 System.out.println("\n\nPosition ("+prompt+" to move):\n"+b);
