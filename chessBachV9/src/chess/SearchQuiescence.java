@@ -5,40 +5,21 @@ import java.util.List;
 
 class SearchQuiescence {
 
-    private static int numberOfRegularEvals = 0;
-    private static int numberOfQuiescentEvals = 0;
-    private static int QCounter = 0;
-
-    static int getNumberOfRegularEvals() {
-        return numberOfRegularEvals;
-    }
-
-    static int getNumberOfQuiescentEvals() {
-        return numberOfQuiescentEvals;
-    }
-
-    public static int getQCounter() {
-        return QCounter;
-    }
-
     static int quiescentSearchOrganiser (ChessBoard board, int originalPlayer,
                                          int alpha, int beta,
                                          long startTime, long timeLimitMillis) {
 
         if (quietNode(board)) {
-            numberOfRegularEvals++;
             return Evaluator.eval(board);
         } else {
             return quiescentSearch(board, originalPlayer, alpha, beta, startTime, timeLimitMillis);
         }
     }
 
-
     private static int quiescentSearch(ChessBoard board, int originalPlayer, int alpha, int beta,
                                        long startTime, long timeLimitMillis){
 
         int score = Evaluator.eval(board);
-        numberOfQuiescentEvals++;
 
         if (score >= beta) {
             return beta;
@@ -60,8 +41,6 @@ class SearchQuiescence {
         for (int m = 0; m < totalDangerousMoves; m++) {
 
             if (!timeUp){
-                QCounter++;
-
                 Move move = allOrderedDangerousMoves.get(m);
 
                 ChessBoard childBoard = new ChessBoard(board);

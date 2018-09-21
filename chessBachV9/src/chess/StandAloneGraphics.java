@@ -27,9 +27,9 @@ public class StandAloneGraphics {
         SwingUtilities.invokeLater(r);
     }
 
-    static void checkForEnd (ChessBoard b, Move[] moveArray){
-        moveArray = (Move[]) b.generateMoves().toArray(new Move[0]);
-        if (moveArray.length == 0) {
+    static void checkForEnd (ChessBoard b){
+        Move[] moves = (Move[]) b.generateMoves().toArray(new Move[0]);
+        if (moves.length == 0) {
             if (b.inCheck()) System.out.println("Checkmate");
             else System.out.println("Stalemate");
         }

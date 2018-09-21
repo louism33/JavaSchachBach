@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class MoveOrganiser {
+class MoveOrganiser {
 
     static List<Move> organiseMoves(ChessBoard board, Move dfsWinningMove, Move enemyKillerMove) {
         List<Move> unrankedMoves = board.generateMoves();

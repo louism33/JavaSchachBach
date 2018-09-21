@@ -10,7 +10,7 @@ import javax.swing.border.*;
 
 import static chess.ChessBoard.*;
 
-public class GraphicsMain {
+class GraphicsMain {
 
     private final JPanel gui = new JPanel(new BorderLayout(3, 3));
     private JButton[][] chessBoardSquares = new JButton[8][8];
@@ -31,18 +31,18 @@ public class GraphicsMain {
         this.board = board;
         this.possibleMove = new PossibleMove(board);
         this.engine = engine;
-        this.engine.newGame(0, 0);
+        this.engine.newGame();
         takenPieces = new ArrayList<>();
         initializeGui();
     }
 
-    void initializeGraphicsHelper(){
-        this.gim = new GraphicsImageManager(this);
+    private void initializeGraphicsHelper(){
+        this.gim = new GraphicsImageManager();
         black = gim.getBlack();
         white = gim.getWhite();
     }
 
-    void initializeGui() {
+    private void initializeGui() {
         gui.setBorder(new EmptyBorder(5, 5, 5, 5));
         JToolBar tools = new JToolBar();
         tools.setFloatable(false);
@@ -111,18 +111,10 @@ public class GraphicsMain {
                 System.out.println(board.generateMoves());
                 System.out.println(board.generateMoves().size());
                 updateButtons(board);
-//                if (numberOfBoards > 0) {
-//                    System.out.println(takenPieces);
-//                }
-//                else {
-//                    System.out.println("No pieces have been taken.");
-//                }
             }
         });
         tools.add(takenPiece);
         tools.addSeparator();
-
-
 
         SpinnerModel model = new SpinnerNumberModel(1000, 100, 100000, 100);
         JSpinner spinner = new JSpinner(model);
@@ -142,6 +134,7 @@ public class GraphicsMain {
                 long startTime = System.currentTimeMillis();
                 Move m = engine.searchGraphics(getBoard(), startTime, timeForMove);
                 dealWithMove(m);
+                StandAloneGraphics.checkForEnd(getBoard());
             }
         });
         tools.add(aiMove);
@@ -174,7 +167,7 @@ public class GraphicsMain {
         }
     }
 
-    void updateButtons(ChessBoard board){
+    private void updateButtons(ChessBoard board){
         Insets buttonMargin = new Insets(0,0,0,0);
         for (int ii = 0; ii < chessBoardSquares.length; ii++) {
             for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
@@ -185,7 +178,7 @@ public class GraphicsMain {
         }
     }
 
-    void initButtons(ChessBoard board){
+    private void initButtons(ChessBoard board){
         Insets buttonMargin = new Insets(0,0,0,0);
         for (int ii = 0; ii < chessBoardSquares.length; ii++) {
             for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
@@ -213,26 +206,20 @@ public class GraphicsMain {
                     public void actionPerformed(ActionEvent actionEvent) {
                         ChessBoard.SquareDesc sq = board.getSquare((x), (y));
                         translateMove(sq);
-                        if (false){
-                            b.setBackground(Color.white);
-                        } else {
-                            b.setBackground(backgroundColor);
-                        }
                     }
                 });
-
                 chessBoardSquares[jj][ii] = b;
             }
         }
     }
 
-    PossibleMove possibleMove;
+    private PossibleMove possibleMove;
 
-    void translateMove(ChessBoard.SquareDesc square){
+    private void translateMove(ChessBoard.SquareDesc square){
         possibleMove.addSquare(square);
     }
 
-    class PossibleMove{
+    private class PossibleMove{
         ChessBoard board;
         String a, b;
         ChessBoard.SquareDesc source, destination;
@@ -241,7 +228,7 @@ public class GraphicsMain {
             this.board = board;
         }
 
-        void addSquare(ChessBoard.SquareDesc square){
+        private void addSquare(ChessBoard.SquareDesc square){
             if (source == null){
                 source = square;
                 destination = null;
@@ -256,7 +243,7 @@ public class GraphicsMain {
             }
         }
 
-        void checkMove(ChessBoard.SquareDesc source, ChessBoard.SquareDesc destination){
+        private void checkMove(ChessBoard.SquareDesc source, ChessBoard.SquareDesc destination){
             int srcx = source.x;
             int srcy = source.y;
             int destx = destination.x;
@@ -296,12 +283,12 @@ public class GraphicsMain {
         }
     }
 
-    void dealWithMove(Move m){
+    private void dealWithMove(Move m){
         updateBoard(m);
         updateArt(m);
     }
 
-    void updateBoard(Move move){
+    private void updateBoard(Move move){
         if (move.capture) {
             int destx = move.destx;
             int desty = move.desty;
@@ -314,10 +301,10 @@ public class GraphicsMain {
         board.makeMove(move);
         futureBoards = new ArrayList<>();
         setBoard(board);
-
+        StandAloneGraphics.checkForEnd(getBoard());
     }
 
-    void updateArt(Move move){
+    private void updateArt(Move move){
 
         int srcx = move.srcx;
         int srcy = move.srcy;
@@ -366,19 +353,15 @@ public class GraphicsMain {
         }
     }
 
-    public final JComponent getChessBoard() {
-        return chessBoard;
-    }
-
-    public final JComponent getGui() {
+    final JComponent getGui() {
         return gui;
     }
 
-    public ChessBoard getBoard() {
+    ChessBoard getBoard() {
         return board;
     }
 
-    public void setBoard(ChessBoard board) {
+    void setBoard(ChessBoard board) {
         this.board = board;
     }
 }

@@ -17,7 +17,7 @@ class GraphicsImageManager {
     private BufferedImage whitePawn, whiteKnight, whiteBishop, whiteRook, whiteQueen, whiteKing;
     private BufferedImage blackPawn, blackKnight, blackBishop, blackRook, blackQueen, blackKing;
 
-    GraphicsImageManager (GraphicsMain cg){
+    GraphicsImageManager (){
         loadPics();
         pickColors();
     }
@@ -87,7 +87,6 @@ class GraphicsImageManager {
             white = new Color(205, 133, 63);
         }
     }
-
 
     private void loadPics(){
         try {

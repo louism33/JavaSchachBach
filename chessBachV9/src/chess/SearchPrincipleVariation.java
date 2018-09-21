@@ -7,12 +7,6 @@ class SearchPrincipleVariation {
     private static final int MATE = Evaluator.MATE;
     private static Move dfsWinningMove = new Move(), enemyKillerMove = new Move();
 
-    private static int PVSCounter = 0;
-
-    public static int getPVSCounter() {
-        return PVSCounter;
-    }
-
     static int principleVariationSearch(ChessBoard motherBoard, ChessBoard board,
                                         int originalPlayer, int howDeep,
                                         int alpha, int beta, long startTime, long timeLimitMillis) {
@@ -29,7 +23,6 @@ class SearchPrincipleVariation {
         for (int m = 0; m < totalMoves; m++) {
 
             if (!timeUp) {
-                PVSCounter++;
                 Move move = moves.get(m);
                 ChessBoard childBoard = new ChessBoard(board);
                 childBoard.makeMove(move);

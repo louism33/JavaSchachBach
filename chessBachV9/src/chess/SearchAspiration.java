@@ -44,17 +44,10 @@ class SearchAspiration {
                 break;
             }
         }
-
-
         return score;
     }
 
-
-    public static Move getDfsWinningMove() {
+    static Move getDfsWinningMove() {
         return dfsWinningMove;
-    }
-
-    public static Move getEnemyKillerMove() {
-        return enemyKillerMove;
     }
 }

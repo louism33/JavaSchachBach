@@ -2,7 +2,7 @@ package chess;
 
 import chess.ChessBoard.SquareDesc;
 
-public class Evaluator {
+class Evaluator {
 
     private static final int WHITE = ChessBoard.WHITE;
 
@@ -31,12 +31,6 @@ public class Evaluator {
                 + weightedImbalanceModifier(board)
                 ;
 
-        boolean debugPrinting = true;
-        if (!debugPrinting){
-            printDebug (board, myTurn, enemyTurn, boardScore);
-        }
-
-
         return boardScore;
     }
 
@@ -47,44 +41,11 @@ public class Evaluator {
                 + casteledBonus(board, turn)
                 + outpostBonus(board, turn)
                 + rookOnOpenFileBonus (board, turn)
-
                 + inCheckPenalty(board)
                 + doublePawnPenalty(board, turn)
                 + singleBishopColorPenalty (board, turn)
-
                 ;
-
-
-
         return playersScore;
-    }
-
-
-    private static void printDebug (ChessBoard board, int myTurn, int enemyTurn, int boardScore){
-        printStuff (board, myTurn, allConsideredFactors(board, myTurn));
-        printStuff (board, enemyTurn, allConsideredFactors(board, enemyTurn));
-        System.out.println("--- WiM: "+ weightedImbalanceModifier(board) + " -");
-        System.out.println("----- Final Score: " + boardScore + " ---\n");
-    }
-    private static void printStuff(ChessBoard board, int turn, int playersScore){
-
-        System.out.println("- turn: "+turn);
-        System.out.println("MaP: " + materialAndPosition(board, turn));
-        System.out.println("---");
-        System.out.println("BpB: " +bishopPairBonus(board, turn));
-
-        System.out.println("PsB: " +pawnStructureBonus(board, turn));
-        System.out.println("CaB: "+casteledBonus(board, turn));
-        System.out.println("OpB: "+outpostBonus(board, turn));
-        System.out.println("RoF: " +rookOnOpenFileBonus (board, turn));
-        System.out.println("---");
-        System.out.println("IcP: "+inCheckPenalty(board));
-        System.out.println("DpP: "+doublePawnPenalty(board, turn));
-        System.out.println("BcP: " +singleBishopColorPenalty (board, turn));
-        System.out.println("---");
-
-        System.out.println("finalPlayerScore = " + playersScore);
-        System.out.println("-");
     }
 
     private static int materialAndPosition(ChessBoard board, int turn) {
@@ -177,8 +138,6 @@ public class Evaluator {
     }
 
     private static int weightedImbalanceModifier(ChessBoard board){
-        // create incentive for trades when ahead, penalise them when behind
-        // (by approx 5 points in realistic midgame)
         int weightImbalanceModifier = 75;
         int myTotalPieces = board.getPieces(board.getTurn()).length;
         int yourTotalPieces = board.getPieces(1 - board.getTurn()).length;
@@ -390,7 +349,4 @@ public class Evaluator {
             -30,-10, 20, 30, 30, 20,-10,-30,
             -30,-20,-10,  0,  0,-10,-20,-30,
             -50,-40,-30,-20,-20,-30,-40,-50};
-
-
-
 }
