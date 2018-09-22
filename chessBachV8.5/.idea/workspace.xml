@@ -7,44 +7,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b4e6eaa-3f0a-41aa-b6a4-4ba81c122804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/chessBachV8_5_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/out/artifacts/chessBachV8_5_jar/chessBachV8.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/ChessBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/Evaluator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/GraphicsImageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/GraphicsMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/Move.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/MoveOrganiser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/SearchAspiration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/SearchIterativeDeepener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/SearchPrincipleVariation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/SearchQuiescence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/java/chess/StandAloneGraphics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackBishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackKing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackKnight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackPawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackQueen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/blackRook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/chess (copy).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/chess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/chessboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/pieces.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whiteBishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whiteKing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whiteKnight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whitePawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whiteQueen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/src/main/resources/whiteRook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackBishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackKing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackKnight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackPawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackQueen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/blackRook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess (copy).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/ChessBoard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/Engine.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/Evaluator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/GraphicsImageManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/GraphicsMain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/Move.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/MoveOrganiser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/SearchAspiration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/SearchIterativeDeepener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/SearchPrincipleVariation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/SearchQuiescence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chess/StandAloneGraphics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/chessboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/pieces.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whiteBishop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whiteKing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whiteKnight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whitePawn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whiteQueen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chessBachV9/target/classes/whiteRook.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV8.5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chessBachV8.5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$PieceDesc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$PieceDesc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$SquareDesc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$SquareDesc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsImageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$PossibleMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$PossibleMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/MoveOrganiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/MoveOrganiser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchAspiration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchAspiration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchIterativeDeepener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchIterativeDeepener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchPrincipleVariation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchPrincipleVariation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchQuiescence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchQuiescence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chessBachV9/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chessBachV9/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chessBachV9/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chessBachV9/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chessBachV9/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chessBachV9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chessBachV9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chessBachV9/chessBachV8.5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../chessBachV9/chessBachV8.5.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -150,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,8 +189,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -346,7 +374,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537633892564" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537640947545" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -356,13 +384,13 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$PROJECT_DIR$/out/artifacts/META-INF" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/META-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/out/artifacts/META-INF" />
-      <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
   <component name="RunDashboard">
@@ -417,12 +445,12 @@
       <workItem from="1537605599979" duration="15075000" />
       <workItem from="1537623060551" duration="1525000" />
       <workItem from="1537626165709" duration="357000" />
-      <workItem from="1537633142340" duration="749000" />
+      <workItem from="1537633142340" duration="3100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21946000" />
+    <option name="totallyTimeSpent" value="24297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
@@ -571,7 +599,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -580,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
