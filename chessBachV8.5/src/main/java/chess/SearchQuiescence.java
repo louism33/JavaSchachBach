@@ -17,20 +17,21 @@ class SearchQuiescence {
     }
 
     private static int quiescentSearch(ChessBoard board, int originalPlayer, int alpha, int beta,
-                                       long startTime, long timeLimitMillis){
+                                        long startTime, long timeLimitMillis){
 
         int score = Evaluator.eval(board);
 
         if (score >= beta) {
-            return beta;
+            return beta; // score ?
         }
 
         if (alpha < score) {
             alpha = score;
         }
 
-        List<Move> allDangerousMoves = allCaptureMoves(board);
-        allDangerousMoves.addAll(allCheckMoves(board));
+        List<Move> allDangerousMoves = new ArrayList<>();
+        allDangerousMoves.addAll(allCaptureMoves(board));
+//        allDangerousMoves.addAll(allCheckMoves(board));
 
         List<Move> allOrderedDangerousMoves = MoveOrganiser.organiseMovesForQuiescent(board, allDangerousMoves);
 
@@ -98,7 +99,7 @@ class SearchQuiescence {
     private static boolean quietNode (ChessBoard board){
         if (board.inCheck()) return false;
         if (numberOfCaptureMoves(board) > 0) return false;
-        if (allCheckMoves(board).size() > 0) return false;
+//        if (allCheckMoves(board).size() > 0) return false;
         return true;
     }
 

@@ -1,8 +1,8 @@
 package chess;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 class MoveOrganiser {
@@ -87,16 +87,13 @@ class MoveOrganiser {
         ChessBoard.SquareDesc victimPiece =
                 board.getSquare(move.destx, move.desty);
 
-        if (victimPiece.type == 6) {
-            return 0; // checking moves placed in middle
-        }
-
         return qScoreHelper(victimPiece) - qScoreHelper(takingPiece);
     }
 
     private static int qScoreHelper(ChessBoard.SquareDesc piece){
         switch (piece.type) {
             case 5 : return 1;
+            case 6 : return 3; //pure checking move, no capture
             case 0 : return 3;
             case 1 : return 3;
             case 2 : return 5;

@@ -1,14 +1,11 @@
 package chess;
 
 import javax.swing.*;
-import java.util.logging.Logger;
 
 public class StandAloneGraphics {
 
-    private static final Logger logger = Logger.getLogger(StandAloneGraphics.class.getName());
-
     public static void main(String[] args) {
-//        logger.info("Starting Main Method");
+
         ChessBoard board = new ChessBoard();
         Engine engine = new Engine();
         Runnable r = new Runnable() {

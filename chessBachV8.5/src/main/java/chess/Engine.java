@@ -10,10 +10,6 @@ class Engine {
         board = new ChessBoard();
     }
 
-    ChessBoard getBoard() {
-        return board;
-    }
-
     Move searchGraphics(ChessBoard board, long startTime, long timeLimitMillis){
         this.board = board;
         int numberOfMoves = board.generateMoves().size();

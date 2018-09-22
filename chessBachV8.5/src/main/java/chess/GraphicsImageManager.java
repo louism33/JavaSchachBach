@@ -2,14 +2,11 @@ package chess;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import static chess.ChessBoard.*;
-import static chess.ChessBoard.BLACK;
-import static chess.ChessBoard.KING;
 
 class GraphicsImageManager {
 

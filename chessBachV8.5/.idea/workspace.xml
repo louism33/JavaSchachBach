@@ -1,124 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="chessBachV8.5:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3b4e6eaa-3f0a-41aa-b6a4-4ba81c122804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/jarmaker/AwtExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/chessBachV8_5_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV6.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV7.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chessBachV8.5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chessBachV8.5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessBachV8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessEngineVersionOne.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/ChessBoard$Pair.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/ChessBoard$PieceDesc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/ChessBoard$SquareDesc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsImageManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain$PossibleMove.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/GraphicsMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/MoveOrganiser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/SearchAspiration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/SearchIterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/SearchPrincipleVariation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/SearchQuiescence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/StandAloneGraphics$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/chess/StandAloneGraphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8.5/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/Evaluator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/GraphicsImageManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/GraphicsMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/Move.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/MoveOrganiser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/SearchAspiration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/SearchIterativeDeepener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/SearchPrincipleVariation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/SearchQuiescence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/StandAlone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/StandAloneGraphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/chess/StandAloneSimpleGraphics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chessBachV8/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/ChessBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Evaluator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/GraphicsImageManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/GraphicsMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/Move.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/MoveOrganiser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/SearchAspiration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/SearchIterativeDeepener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/SearchPrincipleVariation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/SearchQuiescence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chess/StandAloneGraphics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackPawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/blackRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/chess (copy).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/chess.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/chessboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/pieces.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whiteBishop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whiteKing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whiteKnight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whitePawn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whiteQueen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/whiteRook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chessBachV9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chessBachV9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$Pair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$PieceDesc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$PieceDesc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard$SquareDesc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard$SquareDesc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/ChessBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/Engine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsImageManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$PossibleMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain$PossibleMove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/GraphicsMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/GraphicsMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/MoveOrganiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/MoveOrganiser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchAspiration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchAspiration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchIterativeDeepener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchIterativeDeepener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchPrincipleVariation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchPrincipleVariation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/SearchQuiescence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/SearchQuiescence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chess/StandAloneGraphics.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -128,43 +54,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/chessBachV8_5$StandAloneGraphics.ic" NAME="StandAloneGraphics Coverage Results" MODIFIED="1537611914865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>chess.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-2097622325">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="MF" value="1" />
           <entry key="iml" value="3" />
-          <entry key="java" value="13" />
-          <entry key="properties" value="1" />
+          <entry key="java" value="51" />
+          <entry key="properties" value="3" />
           <entry key="tld" value="1" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="13" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="51" />
+          <entry key="Manifest" value="1" />
+          <entry key="Properties" value="3" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="210" />
-          <entry key="xml" value="39" />
+          <entry key="java" value="1228" />
+          <entry key="xml" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="210" />
-          <entry key="XML" value="39" />
+          <entry key="JAVA" value="1228" />
+          <entry key="XML" value="45" />
         </counts>
       </usages-collector>
     </session>
@@ -174,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="1185">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -183,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -192,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -201,17 +137,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="290">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,24 +159,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chessBachV8.5.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="1125">
+              <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -256,6 +211,15 @@
       <find>public</find>
       <find>GraphicsImageManager</find>
       <find>1.5</find>
+      <find>print</find>
+      <find>genera</find>
+      <find>ass</find>
+      <find>log</find>
+      <find>info</find>
+      <find>chec</find>
+      <find>checkforen</find>
+      <find>marg</find>
+      <find>logger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -270,9 +234,16 @@
         <option value="$PROJECT_DIR$/src/chess/GraphicsMain.java" />
         <option value="$PROJECT_DIR$/src/chess/StandAloneGraphics.java" />
         <option value="$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/Engine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java" />
         <option value="$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java" />
       </list>
     </option>
   </component>
@@ -289,9 +260,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
-    <option name="width" value="802" />
+    <option name="width" value="809" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -302,7 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -310,6 +280,24 @@
             <path>
               <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
               <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="chessBachV8_5_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
@@ -340,29 +328,29 @@
             <path>
               <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
               <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chessBachV8.5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chessBachV8.5" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537607432936" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537633892564" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -370,8 +358,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/META-INF" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/artifacts/META-INF" />
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
@@ -387,8 +377,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="StandAloneGraphics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JAR Application.chessBachV8.5.jar">
+    <configuration name="StandAloneGraphics" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chess.StandAloneGraphics" />
       <module name="chessBachV8.5" />
       <extension name="coverage">
@@ -401,11 +391,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.StandAloneGraphics" />
-      </list>
-    </recent_temporary>
+    <configuration name="chessBachV8.5.jar" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/chessBachV8_5_jar/chessBachV8.5.jar" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="10" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.StandAloneGraphics" />
+      <item itemvalue="JAR Application.chessBachV8.5.jar" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -419,18 +414,20 @@
       <updated>1537562337760</updated>
       <workItem from="1537562341672" duration="1148000" />
       <workItem from="1537602448496" duration="3092000" />
-      <workItem from="1537605599979" duration="1825000" />
+      <workItem from="1537605599979" duration="15075000" />
+      <workItem from="1537623060551" duration="1525000" />
+      <workItem from="1537626165709" duration="357000" />
+      <workItem from="1537633142340" duration="749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6065000" />
+    <option name="totallyTimeSpent" value="21946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="802" height="741" extended-state="4" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3448276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29090908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -441,7 +438,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32847896" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32847896" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49838188" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -459,6 +456,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,20 +465,24 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>moves.contains(bestMove)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/chess/StandAlone.java" />
+    <entry file="file://$PROJECT_DIR$/src/chess/StandAloneSimpleGraphics.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml.tld" />
+    <entry file="file://$PROJECT_DIR$/chessBachV1.iml" />
+    <entry file="file://$PROJECT_DIR$/chessBachV6.iml" />
+    <entry file="file://$PROJECT_DIR$/chessBachV8.5.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chess/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -488,11 +490,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chess/StandAloneSimpleGraphics.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chess/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="345">
+          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -503,82 +511,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml.tld" />
-    <entry file="file://$PROJECT_DIR$/chessBachV1.iml" />
-    <entry file="file://$PROJECT_DIR$/chessBachV6.iml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties" />
+    <entry file="file://$PROJECT_DIR$/out/artifacts/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="85" column="48" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchPrincipleVariation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chessBachV8.5.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="1185">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/chess/GraphicsMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/GraphicsImageManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/Move.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchIterativeDeepener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="105">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+        <state relative-caret-position="240">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/MoveOrganiser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchAspiration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/SearchQuiescence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/chess/StandAloneGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -587,11 +590,20 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="jpa-descriptors" />
+              <type id="artifact" />
+              <type id="library" />
+              <type id="javaee-facet-resources" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>chessBachV8.5:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -658,6 +670,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: log4j:log4j:1.2.17</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

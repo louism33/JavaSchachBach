@@ -1,12 +1,13 @@
 package chess;
 
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.*;
-import javax.swing.border.*;
 
 import static chess.ChessBoard.*;
 
@@ -107,9 +108,7 @@ class GraphicsMain {
         takenPiece.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                int numberOfBoards = takenPieces.size();
                 System.out.println(board.generateMoves());
-                System.out.println(board.generateMoves().size());
                 updateButtons(board);
             }
         });
@@ -168,7 +167,6 @@ class GraphicsMain {
     }
 
     private void updateButtons(ChessBoard board){
-        Insets buttonMargin = new Insets(0,0,0,0);
         for (int ii = 0; ii < chessBoardSquares.length; ii++) {
             for (int jj = 0; jj < chessBoardSquares[ii].length; jj++) {
                 ChessBoard.SquareDesc sq = this.board.getSquare((jj), (7-ii));
@@ -239,7 +237,6 @@ class GraphicsMain {
             }
             else {
                 reset();
-                System.out.println("error");
             }
         }
 

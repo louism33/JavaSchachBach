@@ -1,9 +1,10 @@
 package chess;
 
+
 class SearchAspiration {
 
     private static final int MATE = Evaluator.MATE;
-    private static Move dfsWinningMove = new Move(), enemyKillerMove = new Move();
+    private static Move dfsWinningMove = new Move();
 
     static int aspirationSearch(ChessBoard board, int depthToSearchTo, int aspirationScore,
                                  long startTime, long timeLimitMillis){
@@ -26,7 +27,6 @@ class SearchAspiration {
                     depthToSearchTo, alpha, beta, startTime, timeLimitMillis);
 
             dfsWinningMove = SearchPrincipleVariation.getDfsWinningMove();
-            enemyKillerMove = SearchPrincipleVariation.getEnemyKillerMove();
 
             long currentTime = System.currentTimeMillis();
             long timeLeft = startTime + timeLimitMillis - currentTime;

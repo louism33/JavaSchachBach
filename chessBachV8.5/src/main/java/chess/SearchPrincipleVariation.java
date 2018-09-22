@@ -70,8 +70,4 @@ class SearchPrincipleVariation {
     static Move getDfsWinningMove() {
         return dfsWinningMove;
     }
-
-    static Move getEnemyKillerMove() {
-        return enemyKillerMove;
-    }
 }
