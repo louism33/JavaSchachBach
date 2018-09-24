@@ -22,7 +22,7 @@ class MoveOrganiser {
     }
 
     private static List<Move> rankMoves(List<Move> moves, Move killerMove) {
-        List<Move> rankedMoves = new ArrayList<>(moves.size());
+        List<Move> rankedMoves = new ArrayList<>();
         List<Move> temp = new ArrayList<>();
         List<Move> temp1 = new ArrayList<>();
         List<Move> temp2 = new ArrayList<>();
